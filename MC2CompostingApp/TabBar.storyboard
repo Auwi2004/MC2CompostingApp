@@ -36,6 +36,11 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="PanduanLabel" destination="e8r-TN-4IM" id="aDb-q0-cDL"/>
+                        <outlet property="PanduanTabBar" destination="Qhr-w3-iIJ" id="1Ov-mk-ne2"/>
+                        <outlet property="PerencanaanTabBar" destination="hSq-8B-cfI" id="bng-f3-vCR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

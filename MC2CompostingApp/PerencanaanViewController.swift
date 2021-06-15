@@ -10,17 +10,11 @@ import UIKit
 class PerencanaanViewController: UIViewController {
 
     @IBOutlet weak var labelpilih: UILabel!
-    
     @IBOutlet weak var button2bulan: UIButton!
-    
     @IBOutlet weak var button3bulan: UIButton!
-    
     @IBOutlet weak var button6bulan: UIButton!
-    
     @IBOutlet weak var view2bulan: UIView!
-    
     @IBOutlet weak var view3bulan: UIView!
-    
     @IBOutlet weak var view6bulan: UIView!
     
     
@@ -28,6 +22,8 @@ class PerencanaanViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
     }
     
 

@@ -9,10 +9,20 @@ import UIKit
 
 class TabBarViewController: UIViewController {
 
+    @IBOutlet weak var PanduanTabBar: UITabBarItem!
+    @IBOutlet weak var PerencanaanTabBar: UITabBarItem!
+    @IBOutlet weak var PanduanLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // Set Up first view controller
+       
+        
+        
+        
+        
     }
     
 

@@ -10,32 +10,45 @@ import UIKit
 class SetReminderViewController: UIViewController {
 
     @IBOutlet weak var labelpengingat: UILabel!
-    
     @IBOutlet weak var labelsetiap: UILabel!
-    
     @IBOutlet weak var labeljam: UILabel!
-    
     @IBOutlet weak var pickersetiap: UIPickerView!
-    
     @IBOutlet weak var pickerjam: UIDatePicker!
-    
     @IBOutlet weak var buttonsave: UIButton!
+    
+    var setiap = String()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickersetiap.dataSource = self
+        pickersetiap.delegate = self
+        
+        let setiap = ["3 Hari","7 Hari"]
 
-        // Do any additional setup after loading the view.
+        
+        
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+//setting picker view untuk pilihan hari
+extension UIViewController : UIPickerViewDataSource {
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return setiap.count
+        
+    }
+}
+
+extension UIViewController : UIPickerViewDelegate{
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return setiap[row]
+    }
+
+}
+
