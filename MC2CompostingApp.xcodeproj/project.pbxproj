@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36D5010D2678AE0E00FFD110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5010C2678AE0E00FFD110 /* AppDelegate.swift */; };
+		36D5010F2678AE0E00FFD110 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5010E2678AE0E00FFD110 /* SceneDelegate.swift */; };
+		36D501112678AE0E00FFD110 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D501102678AE0E00FFD110 /* ViewController.swift */; };
+		36D501142678AE0E00FFD110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D501122678AE0E00FFD110 /* Main.storyboard */; };
+		36D501172678AE0E00FFD110 /* MC2CompostingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36D501152678AE0E00FFD110 /* MC2CompostingApp.xcdatamodeld */; };
+		36D501192678AE0F00FFD110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36D501182678AE0F00FFD110 /* Assets.xcassets */; };
+		36D5011C2678AE0F00FFD110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D5011A2678AE0F00FFD110 /* LaunchScreen.storyboard */; };
+		36D501272678AE0F00FFD110 /* MC2CompostingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D501262678AE0F00FFD110 /* MC2CompostingAppTests.swift */; };
+		36D501322678AE0F00FFD110 /* MC2CompostingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D501312678AE0F00FFD110 /* MC2CompostingAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36D501232678AE0F00FFD110 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36D501012678AE0E00FFD110 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36D501082678AE0E00FFD110;
+			remoteInfo = MC2CompostingApp;
+		};
+		36D5012E2678AE0F00FFD110 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36D501012678AE0E00FFD110 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36D501082678AE0E00FFD110;
+			remoteInfo = MC2CompostingApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		36D501092678AE0E00FFD110 /* MC2CompostingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC2CompostingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36D5010C2678AE0E00FFD110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		36D5010E2678AE0E00FFD110 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		36D501102678AE0E00FFD110 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		36D501132678AE0E00FFD110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		36D501162678AE0E00FFD110 /* MC2CompostingApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MC2CompostingApp.xcdatamodel; sourceTree = "<group>"; };
+		36D501182678AE0F00FFD110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36D5011B2678AE0F00FFD110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		36D5011D2678AE0F00FFD110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36D501222678AE0F00FFD110 /* MC2CompostingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MC2CompostingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36D501262678AE0F00FFD110 /* MC2CompostingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2CompostingAppTests.swift; sourceTree = "<group>"; };
+		36D501282678AE0F00FFD110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36D5012D2678AE0F00FFD110 /* MC2CompostingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MC2CompostingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36D501312678AE0F00FFD110 /* MC2CompostingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2CompostingAppUITests.swift; sourceTree = "<group>"; };
+		36D501332678AE0F00FFD110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36D501062678AE0E00FFD110 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D5011F2678AE0F00FFD110 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D5012A2678AE0F00FFD110 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36D501002678AE0E00FFD110 = {
+			isa = PBXGroup;
+			children = (
+				36D5010B2678AE0E00FFD110 /* MC2CompostingApp */,
+				36D501252678AE0F00FFD110 /* MC2CompostingAppTests */,
+				36D501302678AE0F00FFD110 /* MC2CompostingAppUITests */,
+				36D5010A2678AE0E00FFD110 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		36D5010A2678AE0E00FFD110 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36D501092678AE0E00FFD110 /* MC2CompostingApp.app */,
+				36D501222678AE0F00FFD110 /* MC2CompostingAppTests.xctest */,
+				36D5012D2678AE0F00FFD110 /* MC2CompostingAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36D5010B2678AE0E00FFD110 /* MC2CompostingApp */ = {
+			isa = PBXGroup;
+			children = (
+				36D5010C2678AE0E00FFD110 /* AppDelegate.swift */,
+				36D5010E2678AE0E00FFD110 /* SceneDelegate.swift */,
+				36D501102678AE0E00FFD110 /* ViewController.swift */,
+				36D501122678AE0E00FFD110 /* Main.storyboard */,
+				36D501182678AE0F00FFD110 /* Assets.xcassets */,
+				36D5011A2678AE0F00FFD110 /* LaunchScreen.storyboard */,
+				36D5011D2678AE0F00FFD110 /* Info.plist */,
+				36D501152678AE0E00FFD110 /* MC2CompostingApp.xcdatamodeld */,
+			);
+			path = MC2CompostingApp;
+			sourceTree = "<group>";
+		};
+		36D501252678AE0F00FFD110 /* MC2CompostingAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				36D501262678AE0F00FFD110 /* MC2CompostingAppTests.swift */,
+				36D501282678AE0F00FFD110 /* Info.plist */,
+			);
+			path = MC2CompostingAppTests;
+			sourceTree = "<group>";
+		};
+		36D501302678AE0F00FFD110 /* MC2CompostingAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				36D501312678AE0F00FFD110 /* MC2CompostingAppUITests.swift */,
+				36D501332678AE0F00FFD110 /* Info.plist */,
+			);
+			path = MC2CompostingAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36D501082678AE0E00FFD110 /* MC2CompostingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36D501362678AE0F00FFD110 /* Build configuration list for PBXNativeTarget "MC2CompostingApp" */;
+			buildPhases = (
+				36D501052678AE0E00FFD110 /* Sources */,
+				36D501062678AE0E00FFD110 /* Frameworks */,
+				36D501072678AE0E00FFD110 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MC2CompostingApp;
+			productName = MC2CompostingApp;
+			productReference = 36D501092678AE0E00FFD110 /* MC2CompostingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		36D501212678AE0F00FFD110 /* MC2CompostingAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36D501392678AE0F00FFD110 /* Build configuration list for PBXNativeTarget "MC2CompostingAppTests" */;
+			buildPhases = (
+				36D5011E2678AE0F00FFD110 /* Sources */,
+				36D5011F2678AE0F00FFD110 /* Frameworks */,
+				36D501202678AE0F00FFD110 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36D501242678AE0F00FFD110 /* PBXTargetDependency */,
+			);
+			name = MC2CompostingAppTests;
+			productName = MC2CompostingAppTests;
+			productReference = 36D501222678AE0F00FFD110 /* MC2CompostingAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		36D5012C2678AE0F00FFD110 /* MC2CompostingAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36D5013C2678AE0F00FFD110 /* Build configuration list for PBXNativeTarget "MC2CompostingAppUITests" */;
+			buildPhases = (
+				36D501292678AE0F00FFD110 /* Sources */,
+				36D5012A2678AE0F00FFD110 /* Frameworks */,
+				36D5012B2678AE0F00FFD110 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36D5012F2678AE0F00FFD110 /* PBXTargetDependency */,
+			);
+			name = MC2CompostingAppUITests;
+			productName = MC2CompostingAppUITests;
+			productReference = 36D5012D2678AE0F00FFD110 /* MC2CompostingAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36D501012678AE0E00FFD110 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					36D501082678AE0E00FFD110 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					36D501212678AE0F00FFD110 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 36D501082678AE0E00FFD110;
+					};
+					36D5012C2678AE0F00FFD110 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 36D501082678AE0E00FFD110;
+					};
+				};
+			};
+			buildConfigurationList = 36D501042678AE0E00FFD110 /* Build configuration list for PBXProject "MC2CompostingApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 36D501002678AE0E00FFD110;
+			productRefGroup = 36D5010A2678AE0E00FFD110 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36D501082678AE0E00FFD110 /* MC2CompostingApp */,
+				36D501212678AE0F00FFD110 /* MC2CompostingAppTests */,
+				36D5012C2678AE0F00FFD110 /* MC2CompostingAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36D501072678AE0E00FFD110 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D5011C2678AE0F00FFD110 /* LaunchScreen.storyboard in Resources */,
+				36D501192678AE0F00FFD110 /* Assets.xcassets in Resources */,
+				36D501142678AE0E00FFD110 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D501202678AE0F00FFD110 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D5012B2678AE0F00FFD110 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36D501052678AE0E00FFD110 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D501112678AE0E00FFD110 /* ViewController.swift in Sources */,
+				36D5010D2678AE0E00FFD110 /* AppDelegate.swift in Sources */,
+				36D5010F2678AE0E00FFD110 /* SceneDelegate.swift in Sources */,
+				36D501172678AE0E00FFD110 /* MC2CompostingApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D5011E2678AE0F00FFD110 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D501272678AE0F00FFD110 /* MC2CompostingAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D501292678AE0F00FFD110 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D501322678AE0F00FFD110 /* MC2CompostingAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36D501242678AE0F00FFD110 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36D501082678AE0E00FFD110 /* MC2CompostingApp */;
+			targetProxy = 36D501232678AE0F00FFD110 /* PBXContainerItemProxy */;
+		};
+		36D5012F2678AE0F00FFD110 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36D501082678AE0E00FFD110 /* MC2CompostingApp */;
+			targetProxy = 36D5012E2678AE0F00FFD110 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		36D501122678AE0E00FFD110 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36D501132678AE0E00FFD110 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		36D5011A2678AE0F00FFD110 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36D5011B2678AE0F00FFD110 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36D501342678AE0F00FFD110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		36D501352678AE0F00FFD110 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		36D501372678AE0F00FFD110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58DZ9KZFZM;
+				INFOPLIST_FILE = MC2CompostingApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.infinitelearning.MC2CompostingApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		36D501382678AE0F00FFD110 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58DZ9KZFZM;
+				INFOPLIST_FILE = MC2CompostingApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.infinitelearning.MC2CompostingApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		36D5013A2678AE0F00FFD110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58DZ9KZFZM;
+				INFOPLIST_FILE = MC2CompostingAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.infinitelearning.MC2CompostingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MC2CompostingApp.app/MC2CompostingApp";
+			};
+			name = Debug;
+		};
+		36D5013B2678AE0F00FFD110 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58DZ9KZFZM;
+				INFOPLIST_FILE = MC2CompostingAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.infinitelearning.MC2CompostingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MC2CompostingApp.app/MC2CompostingApp";
+			};
+			name = Release;
+		};
+		36D5013D2678AE0F00FFD110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58DZ9KZFZM;
+				INFOPLIST_FILE = MC2CompostingAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.infinitelearning.MC2CompostingAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MC2CompostingApp;
+			};
+			name = Debug;
+		};
+		36D5013E2678AE0F00FFD110 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58DZ9KZFZM;
+				INFOPLIST_FILE = MC2CompostingAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.infinitelearning.MC2CompostingAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MC2CompostingApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36D501042678AE0E00FFD110 /* Build configuration list for PBXProject "MC2CompostingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36D501342678AE0F00FFD110 /* Debug */,
+				36D501352678AE0F00FFD110 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36D501362678AE0F00FFD110 /* Build configuration list for PBXNativeTarget "MC2CompostingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36D501372678AE0F00FFD110 /* Debug */,
+				36D501382678AE0F00FFD110 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36D501392678AE0F00FFD110 /* Build configuration list for PBXNativeTarget "MC2CompostingAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36D5013A2678AE0F00FFD110 /* Debug */,
+				36D5013B2678AE0F00FFD110 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36D5013C2678AE0F00FFD110 /* Build configuration list for PBXNativeTarget "MC2CompostingAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36D5013D2678AE0F00FFD110 /* Debug */,
+				36D5013E2678AE0F00FFD110 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		36D501152678AE0E00FFD110 /* MC2CompostingApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				36D501162678AE0E00FFD110 /* MC2CompostingApp.xcdatamodel */,
+			);
+			currentVersion = 36D501162678AE0E00FFD110 /* MC2CompostingApp.xcdatamodel */;
+			path = MC2CompostingApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 36D501012678AE0E00FFD110 /* Project object */;
+}
