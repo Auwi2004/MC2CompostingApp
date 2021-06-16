@@ -52,15 +52,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KXL-5u-4ja">
-                                <rect key="frame" x="0.0" y="804" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Panduan" id="KNS-Ym-5zG"/>
-                                    <tabBarItem title="Perencanaan" id="YjH-9w-fiE"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
