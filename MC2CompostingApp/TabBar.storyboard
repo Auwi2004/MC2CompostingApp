@@ -27,8 +27,8 @@
                                 <rect key="frame" x="87" y="220" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kk-3q-uTO">
-                                <rect key="frame" x="186" y="376" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1. Siapkan komposter dengan keran atau lubang dibawahnya" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kk-3q-uTO">
+                                <rect key="frame" x="20" y="372" width="374" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -38,8 +38,8 @@
                                 <rect key="frame" x="87" y="451" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="at9-WG-P5v">
-                                <rect key="frame" x="186" y="612" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2. Kumpulkan bahan coklat dan hijau" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="at9-WG-P5v">
+                                <rect key="frame" x="75" y="612" width="278" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -52,6 +52,11 @@
                     <tabBarItem key="tabBarItem" title="Panduan" image="book" catalog="system" selectedImage="book.fill" id="6Dc-9m-rnJ"/>
                     <connections>
                         <outlet property="PanduanLabel" destination="e8r-TN-4IM" id="aDb-q0-cDL"/>
+                        <outlet property="fotoKedua" destination="dv9-34-LE3" id="zRb-kE-Z5U"/>
+                        <outlet property="fotoPertama" destination="0bD-bb-AdR" id="2Ne-5P-6Qs"/>
+                        <outlet property="labelKedua" destination="at9-WG-P5v" id="OWj-Fo-83a"/>
+                        <outlet property="labelPanduan" destination="e8r-TN-4IM" id="Zqb-ug-gdd"/>
+                        <outlet property="labelPertama" destination="6kk-3q-uTO" id="gQf-kZ-MGW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

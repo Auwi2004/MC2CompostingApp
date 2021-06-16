@@ -9,7 +9,13 @@ import UIKit
 
 class TabBarViewController: UIViewController {
 
-    @IBOutlet weak var PanduanLabel: UILabel!
+    @IBOutlet weak var labelPanduan: UILabel!
+    @IBOutlet weak var fotoPertama: UIImageView!
+    @IBOutlet weak var labelPertama: UILabel!
+    @IBOutlet weak var fotoKedua: UIImageView!
+    @IBOutlet weak var labelKedua: UILabel!
+  
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
