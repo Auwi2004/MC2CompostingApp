@@ -20,17 +20,16 @@ class SetReminderViewController: UIViewController, UIPickerViewDataSource, UIPic
     }
     
     
-
+    @IBOutlet weak var textFieldJam: UITextField!
     @IBOutlet weak var labelpengingat: UILabel!
     @IBOutlet weak var labelsetiap: UILabel!
     @IBOutlet weak var labeljam: UILabel!
     @IBOutlet weak var pickersetiap: UIPickerView!
-    @IBOutlet weak var pickerjam: UIDatePicker!
     @IBOutlet weak var buttonsave: UIButton!
     
     
     let setiap = ["3 Hari","7 Hari"]
-
+  
     
     
     override func viewDidLoad() {
@@ -38,12 +37,29 @@ class SetReminderViewController: UIViewController, UIPickerViewDataSource, UIPic
         pickersetiap.dataSource = self
         pickersetiap.delegate = self
         
+        let time = Date()
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_gb")
+        formatter.dateFormat = "HH:mm"
+        textFieldJam.text = formatter.string(from: time)
+        textFieldJam.textColor = .link
         
+        let timePicker = UIDatePicker()
+        timePicker.datePickerMode = .time
+        timePicker.addTarget(self, action: #selector(timePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
+        timePicker.frame.size = CGSize (width: 0, height: 250)
         
-        
-        
+        textFieldJam.inputView = timePicker
     }
-
+    @objc func timePickerValueChanged(sender :UIDatePicker)
+    {
+        // when time is changed it will appear here
+        let formatter = DateFormatter ()
+        formatter.locale = Locale(identifier: "en_gb")
+        formatter.dateFormat = "HH:mm"
+        textFieldJam.text = formatter.string(from: sender.date)
+    }
+    
 }
 
 
