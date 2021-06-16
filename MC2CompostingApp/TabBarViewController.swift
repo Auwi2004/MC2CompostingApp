@@ -15,7 +15,8 @@ class TabBarViewController: UIViewController {
     @IBOutlet weak var fotoKedua: UIImageView!
     @IBOutlet weak var labelKedua: UILabel!
   
-    
+    @IBOutlet weak var buttonNext: UIButton!
+    @IBOutlet weak var buttonPrevious: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
