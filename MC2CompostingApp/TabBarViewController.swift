@@ -18,19 +18,82 @@ class TabBarViewController: UIViewController {
     @IBOutlet weak var buttonNext: UIButton!
     @IBOutlet weak var buttonPrevious: UIButton!
     
+    var imageOne = 0
+    var imageTwo = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         // Set Up first view controller
-       
         
+        imageOne = 1
+        labelPertama.text = String("1. Siapkan komposter dengan keran atau lubang dibawahnya")
+        labelKedua.text = String("2. Kumpulkan bahan coklat dan hijau")
         
+        buttonPrevious.isEnabled = false
         
         
     }
     
-
+    
+    @IBAction func back(_ sender: Any) {
+        
+        imageOne -= 1
+        imageTwo -= 1
+        labelPertama.text = String("")
+        labelKedua.text = String("")
+        
+        
+    }
+    
+    
+    @IBAction func next(_ sender: Any) {
+        
+        imageOne += 1
+        imageTwo += 1
+        labelPertama.text = String("")
+        labelKedua.text = String("")
+    }
+    
+    func panduanKompos() {
+        
+        if imageOne == 1, imageTwo == 1 {
+            buttonPrevious.isEnabled = false
+            fotoPertama.image = UIImage(named: "test.jpg")
+            fotoKedua.image = UIImage(named:"test2.jpg")
+        }
+        
+        if imageOne == 2, imageTwo == 2 {
+            buttonPrevious.isEnabled = false
+            fotoPertama.image = UIImage(named: "test.jpg")
+            fotoKedua.image = UIImage(named:"test2.jpg")
+        }
+        
+        if imageOne == 3, imageTwo == 3 {
+            buttonPrevious.isEnabled = false
+            fotoPertama.image = UIImage(named: "test.jpg")
+            fotoKedua.image = UIImage(named:"test2.jpg")
+        }
+        
+        if imageOne == 4, imageTwo == 4 {
+            buttonPrevious.isEnabled = false
+            fotoPertama.image = UIImage(named: "test.jpg")
+            fotoKedua.image = UIImage(named:"test2.jpg")
+        }
+        
+        if imageOne == 5, imageTwo == 5 {
+            buttonPrevious.isEnabled = false
+            fotoPertama.image = UIImage(named: "test.jpg")
+            fotoKedua.image = UIImage(named:"test2.jpg")
+        }
+        
+        if imageOne == 6, imageTwo == 6 {
+            buttonPrevious.isEnabled = false
+            fotoPertama.image = UIImage(named: "test.jpg")
+            fotoKedua.image = UIImage(named:"test2.jpg")
+        }
+    }
     /*
     // MARK: - Navigation
 
