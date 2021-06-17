@@ -65,19 +65,19 @@ class SetReminderViewController: UIViewController, UIPickerViewDataSource, UIPic
     }
     
         //set save button dengan muncul alert
-    @IBAction func saveButton(_ sender: Any) {
-        
-        let alert = UIAlertController (title: "Cek Reminder Mu", message: "Apakah Kamu yakin dengan waktu reminder mu?", preferredStyle: .alert)
-        
-        let setlagi = UIAlertAction(title: "Set lagi", style: .cancel, handler: nil)
-        let yakin = UIAlertAction(title: "Yakin", style: .default, handler: nil)
-        alert.addAction(setlagi)
-        alert.addAction(yakin)
-        
-        present(alert, animated:true, completion: nil)
-        
-        
-    }
+//    @IBAction func saveButton(_ sender: Any) {
+//
+//        let alert = UIAlertController (title: "Cek Reminder Mu", message: "Apakah Kamu yakin dengan waktu reminder mu?", preferredStyle: .alert)
+//
+//        let setlagi = UIAlertAction(title: "Set lagi", style: .cancel, handler: nil)
+//        let yakin = UIAlertAction(title: "Yakin", style: .default, handler: nil)
+//        alert.addAction(setlagi)
+//        alert.addAction(yakin)
+//
+//        present(alert, animated:true, completion: nil)
+//
+//
+//    }
 }
 
 
