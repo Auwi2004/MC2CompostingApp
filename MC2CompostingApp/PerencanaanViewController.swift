@@ -24,5 +24,13 @@ class PerencanaanViewController: UIViewController {
         // Do any additional setup after loading the view.
 
     }
-
+    @IBAction func action2bulan(_ sender: Any) {
+    }
+    
+    @IBAction func action3bulan(_ sender: Any) {
+    }
+    
+    @IBAction func action6bulan(_ sender: Any) {
+    }
+    
 }
