@@ -8,6 +8,8 @@
 import UIKit
 
 class SetReminderViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    //setting picker pilihan rentang hari
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -27,7 +29,7 @@ class SetReminderViewController: UIViewController, UIPickerViewDataSource, UIPic
     @IBOutlet weak var pickersetiap: UIPickerView!
     @IBOutlet weak var buttonsave: UIButton!
     
-    
+    //pilihan rentang hari
     let setiap = ["3 Hari","7 Hari"]
   
     
@@ -36,6 +38,8 @@ class SetReminderViewController: UIViewController, UIPickerViewDataSource, UIPic
         super.viewDidLoad()
         pickersetiap.dataSource = self
         pickersetiap.delegate = self
+        
+        //setting time picker
         
         let time = Date()
         let formatter = DateFormatter()
