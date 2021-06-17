@@ -18,6 +18,9 @@ class TabBarViewController: UIViewController {
     @IBOutlet weak var buttonNext: UIButton!
     @IBOutlet weak var buttonPrevious: UIButton!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    
     var imageOne = 0
     var imageTwo = 0
     
