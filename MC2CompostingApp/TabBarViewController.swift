@@ -7,96 +7,65 @@
 
 import UIKit
 
-class TabBarViewController: UIViewController {
+class TabBarViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var labelPanduan: UILabel!
-    @IBOutlet weak var fotoPertama: UIImageView!
-    @IBOutlet weak var labelPertama: UILabel!
-    @IBOutlet weak var fotoKedua: UIImageView!
-    @IBOutlet weak var labelKedua: UILabel!
-  
-    @IBOutlet weak var buttonNext: UIButton!
-    @IBOutlet weak var buttonPrevious: UIButton!
-    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var imageOne = 0
-    var imageTwo = 0
+    var images: [String] = ["red","blue","green"]
+    var frame = CGRect(x:0,y:0,width:0,height:0)
+    var desc: [String] = ["balabls","nas;d","sdja"]
+    var desc2: [String] = ["yayay","jsdja","kcsdk"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pageControl.numberOfPages = desc.count
+        for index in 0..<desc.count {
+            frame.origin.x = scrollView.frame.size.width * CGFloat(index)
+            frame.size = scrollView.frame.size
+            
+            let allViewsInXibArray = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)
+
+            //If you only have one view in the xib and you set it's class to MyView class
+            let myView = allViewsInXibArray?.first as! Slide
+            
+            //Set wanted position and size (frame)
+            myView.frame = frame
+            myView.labelAtas.text = desc[index]
+            myView.fotoAtas.image = UIImage(named: images[index])
+            
+            
+            //Add the view
+            self.scrollView.addSubview(myView)
+
+            //TODO: set wanted constraints.
+        }
+        
+        scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(images.count)), height: scrollView.frame.size.height)
+        scrollView.delegate = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        pageControl.frame = CGRect(x:  10, y: view.frame.size.height-100, width: view.frame.size.width-20, height: 70)
+    }
+    
+    //scrollview method
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        var pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
+        pageControl.currentPage = Int(pageNumber)
+        
+    }
+
+
+}
 
         // Do any additional setup after loading the view.
         // Set Up first view controller
         
-        imageOne = 1
-        labelPertama.text = String("1. Siapkan komposter dengan keran atau lubang dibawahnya")
-        labelKedua.text = String("2. Kumpulkan bahan coklat dan hijau")
-        
-        buttonPrevious.isEnabled = false
-        
-        
-    }
-    
-    
-    @IBAction func back(_ sender: Any) {
-        
-        imageOne -= 1
-        imageTwo -= 1
-        labelPertama.text = String("")
-        labelKedua.text = String("")
-        
-        
-    }
-    
-    
-    @IBAction func next(_ sender: Any) {
-        
-        imageOne += 1
-        imageTwo += 1
-        labelPertama.text = String("")
-        labelKedua.text = String("")
-    }
-    
-    func panduanKompos() {
-        
-        if imageOne == 1, imageTwo == 1 {
-            buttonPrevious.isEnabled = false
-            fotoPertama.image = UIImage(named: "test.jpg")
-            fotoKedua.image = UIImage(named:"test2.jpg")
-        }
-        
-        if imageOne == 2, imageTwo == 2 {
-            buttonPrevious.isEnabled = false
-            fotoPertama.image = UIImage(named: "test.jpg")
-            fotoKedua.image = UIImage(named:"test2.jpg")
-        }
-        
-        if imageOne == 3, imageTwo == 3 {
-            buttonPrevious.isEnabled = false
-            fotoPertama.image = UIImage(named: "test.jpg")
-            fotoKedua.image = UIImage(named:"test2.jpg")
-        }
-        
-        if imageOne == 4, imageTwo == 4 {
-            buttonPrevious.isEnabled = false
-            fotoPertama.image = UIImage(named: "test.jpg")
-            fotoKedua.image = UIImage(named:"test2.jpg")
-        }
-        
-        if imageOne == 5, imageTwo == 5 {
-            buttonPrevious.isEnabled = false
-            fotoPertama.image = UIImage(named: "test.jpg")
-            fotoKedua.image = UIImage(named:"test2.jpg")
-        }
-        
-        if imageOne == 6, imageTwo == 6 {
-            buttonPrevious.isEnabled = false
-            fotoPertama.image = UIImage(named: "test.jpg")
-            fotoKedua.image = UIImage(named:"test2.jpg")
-        }
-    }
+ 
     /*
     // MARK: - Navigation
 
@@ -106,5 +75,3 @@ class TabBarViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
