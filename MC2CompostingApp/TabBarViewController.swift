@@ -35,6 +35,7 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
             myView.frame = frame
             myView.labelAtas.text = desc[index]
             myView.fotoAtas.image = UIImage(named: images[index])
+            myView.labelBawah.text = desc2[index]
             
             
             //Add the view
@@ -49,7 +50,7 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        pageControl.frame = CGRect(x:  10, y: view.frame.size.height-100, width: view.frame.size.width-20, height: 70)
+        pageControl.frame = CGRect(x:  10, y: view.frame.size.height-150, width: view.frame.size.width-20, height: 70)
     }
     
     //scrollview method
