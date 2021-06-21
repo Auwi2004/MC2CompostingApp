@@ -18,6 +18,10 @@
 		36D5011C2678AE0F00FFD110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D5011A2678AE0F00FFD110 /* LaunchScreen.storyboard */; };
 		36D501272678AE0F00FFD110 /* MC2CompostingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D501262678AE0F00FFD110 /* MC2CompostingAppTests.swift */; };
 		36D501322678AE0F00FFD110 /* MC2CompostingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D501312678AE0F00FFD110 /* MC2CompostingAppUITests.swift */; };
+		958E545F267CEA73007ABB42 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958E545E267CEA73007ABB42 /* Slide.xib */; };
+		958E5461267CEB85007ABB42 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E5460267CEB85007ABB42 /* Slide.swift */; };
+		958E5462267CEB85007ABB42 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E5460267CEB85007ABB42 /* Slide.swift */; };
+		958E5463267CEB85007ABB42 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E5460267CEB85007ABB42 /* Slide.swift */; };
 		95BA2A1E2678B6C900EB93FF /* Perencanaan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BA2A1D2678B6C900EB93FF /* Perencanaan.storyboard */; };
 		95BA2A202678B6E000EB93FF /* PerencanaanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BA2A1F2678B6E000EB93FF /* PerencanaanViewController.swift */; };
 		95BA2A222678B85600EB93FF /* SetReminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BA2A212678B85600EB93FF /* SetReminder.storyboard */; };
@@ -61,6 +65,8 @@
 		36D5012D2678AE0F00FFD110 /* MC2CompostingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MC2CompostingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D501312678AE0F00FFD110 /* MC2CompostingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2CompostingAppUITests.swift; sourceTree = "<group>"; };
 		36D501332678AE0F00FFD110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		958E545E267CEA73007ABB42 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		958E5460267CEB85007ABB42 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		95BA2A1D2678B6C900EB93FF /* Perencanaan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Perencanaan.storyboard; sourceTree = "<group>"; };
 		95BA2A1F2678B6E000EB93FF /* PerencanaanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerencanaanViewController.swift; sourceTree = "<group>"; };
 		95BA2A212678B85600EB93FF /* SetReminder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetReminder.storyboard; sourceTree = "<group>"; };
@@ -124,6 +130,8 @@
 				36D501122678AE0E00FFD110 /* Main.storyboard */,
 				368722542679BBC4007A5092 /* TabBar.storyboard */,
 				3687225C2679BBF7007A5092 /* TabBarViewController.swift */,
+				958E545E267CEA73007ABB42 /* Slide.xib */,
+				958E5460267CEB85007ABB42 /* Slide.swift */,
 				95BA2A1D2678B6C900EB93FF /* Perencanaan.storyboard */,
 				95BA2A1F2678B6E000EB93FF /* PerencanaanViewController.swift */,
 				95BA2A212678B85600EB93FF /* SetReminder.storyboard */,
@@ -261,6 +269,7 @@
 				36D5011C2678AE0F00FFD110 /* LaunchScreen.storyboard in Resources */,
 				36D501192678AE0F00FFD110 /* Assets.xcassets in Resources */,
 				95BA2A262678B89A00EB93FF /* WeeklyPlanner.storyboard in Resources */,
+				958E545F267CEA73007ABB42 /* Slide.xib in Resources */,
 				95BA2A1E2678B6C900EB93FF /* Perencanaan.storyboard in Resources */,
 				36D501142678AE0E00FFD110 /* Main.storyboard in Resources */,
 				368722552679BBC4007A5092 /* TabBar.storyboard in Resources */,
@@ -295,6 +304,7 @@
 				36D5010F2678AE0E00FFD110 /* SceneDelegate.swift in Sources */,
 				95BA2A242678B86C00EB93FF /* SetReminderViewController.swift in Sources */,
 				95BA2A282678B8AA00EB93FF /* WeeklyPlannerViewController.swift in Sources */,
+				958E5461267CEB85007ABB42 /* Slide.swift in Sources */,
 				36D501172678AE0E00FFD110 /* MC2CompostingApp.xcdatamodeld in Sources */,
 				95BA2A202678B6E000EB93FF /* PerencanaanViewController.swift in Sources */,
 			);
@@ -305,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D501272678AE0F00FFD110 /* MC2CompostingAppTests.swift in Sources */,
+				958E5462267CEB85007ABB42 /* Slide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D501322678AE0F00FFD110 /* MC2CompostingAppUITests.swift in Sources */,
+				958E5463267CEB85007ABB42 /* Slide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

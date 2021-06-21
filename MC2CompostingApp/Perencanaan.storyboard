@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Usg-Ft-F8P">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -34,6 +34,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="action3bulan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EoE-AX-Ktp"/>
                                             <segue destination="fPq-g3-N9g" kind="show" id="R9C-Ka-Q3V"/>
                                         </connections>
                                     </button>
@@ -51,6 +52,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="action6bulan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="odr-gp-0fs"/>
                                             <segue destination="fPq-g3-N9g" kind="show" id="EtL-Pg-tas"/>
                                         </connections>
                                     </button>
@@ -68,6 +70,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="action2bulan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wXc-Bi-Jzb"/>
                                             <segue destination="fPq-g3-N9g" kind="show" id="bSn-P8-KxP"/>
                                         </connections>
                                     </button>
