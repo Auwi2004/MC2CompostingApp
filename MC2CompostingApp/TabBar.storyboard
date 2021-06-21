@@ -16,28 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Panduan membuat kompos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8r-TN-4IM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panduan membuat kompos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8r-TN-4IM">
                                 <rect key="frame" x="103" y="90" width="208" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hY3-Cr-UPg">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hY3-Cr-UPg">
                                 <rect key="frame" x="146" y="760" width="122" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LFC-XQ-1G0">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LFC-XQ-1G0">
                                 <rect key="frame" x="0.0" y="127" width="414" height="625"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="uIk-ZZ-ZzV"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="TAn-jT-fvm"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e8r-TN-4IM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="46" id="0gi-KP-8LN"/>
+                            <constraint firstItem="hY3-Cr-UPg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="4kS-4a-aht"/>
+                            <constraint firstItem="LFC-XQ-1G0" firstAttribute="top" secondItem="e8r-TN-4IM" secondAttribute="bottom" constant="16" id="Inw-W7-DXz"/>
+                            <constraint firstItem="LFC-XQ-1G0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="L7R-Ve-KWg"/>
+                            <constraint firstItem="e8r-TN-4IM" firstAttribute="centerX" secondItem="LFC-XQ-1G0" secondAttribute="centerX" id="SL4-oo-GwF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hY3-Cr-UPg" secondAttribute="bottom" constant="25" id="UUn-3N-LIG"/>
+                            <constraint firstItem="LFC-XQ-1G0" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="W3C-wD-0Bs"/>
+                            <constraint firstItem="hY3-Cr-UPg" firstAttribute="top" secondItem="LFC-XQ-1G0" secondAttribute="bottom" constant="5" id="fhE-jR-TmJ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Panduan" image="book" catalog="system" selectedImage="book.fill" id="6Dc-9m-rnJ"/>
                     <connections>

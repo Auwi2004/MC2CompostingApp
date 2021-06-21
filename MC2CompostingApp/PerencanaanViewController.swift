@@ -25,15 +25,28 @@ class PerencanaanViewController: UIViewController {
 
     }
     @IBAction func action2bulan(_ sender: Any) {
-        let vc = SetReminderViewController(nibName:"SetReminderViewController", bundle: nil)
+        var reminder = UIStoryboard(name: "SetReminder", bundle: nil)
+        let vc = reminder.instantiateViewController(identifier: "SetReminderVC") as! SetReminderViewController
         vc.text = "2 bulan"
+        
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
     @IBAction func action3bulan(_ sender: Any) {
+        var reminder = UIStoryboard(name: "SetReminder", bundle: nil)
+        let vc = reminder.instantiateViewController(identifier: "SetReminderVC") as! SetReminderViewController
+        vc.text = "3 bulan"
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func action6bulan(_ sender: Any) {
+        var reminder = UIStoryboard(name: "SetReminder", bundle: nil)
+        let vc = reminder.instantiateViewController(identifier: "SetReminderVC") as! SetReminderViewController
+        vc.text = "6 bulan"
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

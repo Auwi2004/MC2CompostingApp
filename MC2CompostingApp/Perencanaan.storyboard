@@ -35,7 +35,6 @@
                                         </state>
                                         <connections>
                                             <action selector="action3bulan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EoE-AX-Ktp"/>
-                                            <segue destination="fPq-g3-N9g" kind="show" id="R9C-Ka-Q3V"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -53,7 +52,6 @@
                                         </state>
                                         <connections>
                                             <action selector="action6bulan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="odr-gp-0fs"/>
-                                            <segue destination="fPq-g3-N9g" kind="show" id="EtL-Pg-tas"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -71,7 +69,6 @@
                                         </state>
                                         <connections>
                                             <action selector="action2bulan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wXc-Bi-Jzb"/>
-                                            <segue destination="fPq-g3-N9g" kind="show" id="bSn-P8-KxP"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -125,9 +122,6 @@
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="R9C-Ka-Q3V"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

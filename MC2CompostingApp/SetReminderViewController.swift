@@ -39,6 +39,10 @@ class SetReminderViewController: UIViewController, UIPickerViewDataSource, UIPic
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //dari Benita
+        print(text)
+        
         pickersetiap.dataSource = self
         pickersetiap.delegate = self
         
