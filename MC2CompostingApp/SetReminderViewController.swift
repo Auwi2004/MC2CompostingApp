@@ -9,6 +9,9 @@ import UIKit
 
 class SetReminderViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    //dari Benita coba dulu ya Bu Pur
+    var text: String = ""
+    
     //setting picker pilihan rentang hari
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

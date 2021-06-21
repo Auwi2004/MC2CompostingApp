@@ -25,6 +25,9 @@ class PerencanaanViewController: UIViewController {
 
     }
     @IBAction func action2bulan(_ sender: Any) {
+        let vc = SetReminderViewController(nibName:"SetReminderViewController", bundle: nil)
+        vc.text = "2 bulan"
+        
     }
     
     @IBAction func action3bulan(_ sender: Any) {
