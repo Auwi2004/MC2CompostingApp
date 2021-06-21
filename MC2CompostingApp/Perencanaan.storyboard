@@ -69,6 +69,7 @@
                                         </state>
                                         <connections>
                                             <action selector="action2bulan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wXc-Bi-Jzb"/>
+                                            <segue destination="fPq-g3-N9g" kind="show" id="SVd-GQ-ZS2"/>
                                         </connections>
                                     </button>
                                 </subviews>

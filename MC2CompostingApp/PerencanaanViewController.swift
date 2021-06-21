@@ -49,4 +49,13 @@ class PerencanaanViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-}
+    //ini kalau pake tarik2
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.destination.isKind(of: SetReminderViewController.self){
+//            let vc = segue.destination as! SetReminderViewController
+//            vc.text = "4 bulan"
+//
+//        }
+
+    }
+
