@@ -13,7 +13,7 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var images: [String] = ["red","blue","green"]
+    var images: [String] = ["Step 3","Hasil Akhir","green"]
     var frame = CGRect(x:0,y:0,width:0,height:0)
     var desc: [String] = ["balabls","nas;d","sdja"]
     var desc2: [String] = ["yayay","jsdja","kcsdk"]
