@@ -23,7 +23,7 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-                scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(desc.count), height: view.frame.height)
+                scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(desc.count), height: 300)
                 scrollView.isPagingEnabled = true
 
         pageControl.numberOfPages = desc.count
