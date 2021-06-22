@@ -16,8 +16,8 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
     var images: [String] = ["step 1","Step 3","step 5","step 7", "step 11"]
     var images2: [String] = ["step 2","step 4","step 6","step 8"]
     var frame = CGRect(x:0,y:0,width:0,height:0)
-    var desc: [String] = ["balabls","nas;d","sdja"]
-    var desc2: [String] = ["yayay","jsdja","kcsdk"]
+    var desc: [String] = ["1. Siapkan bahan hijau seperti sisa sayur dan buah, bahan cokelat seperti jerami dan daun kering, bioaktivator serta komposter dengan kran atau lubang di bagian bawah.","3. Tusuk-tusuk material agar terdapat aerasi udara dan tutup komposter.","5. Sebelum memasukkan sampah baru, aduk isi komposter terlebih dahulu.","7. Sampah dapat dimasukkan terus sampai komposter penuh.","9. Cek secara berkala dan keluarkan air lindi. Air lindi dapat digunakan sebagai pupuk cair atau bahan bioaktivator.","11. Kompos yang sudah matang memiliki ciri-ciri: \n - Tidak basah \n - Dingin \n - Terurai bila digenggam (berbutir halus) \n - Berwarna hitam \n - Tidak berbau (bau tanah)"]
+    var desc2: [String] = ["2. Masukkan bahan coklat dan hijau dengan perbandingan 2 : 1 secara selang-seling.","4. Cek dan aduk kompost secara berkala sesuai waktu panen yang dipilih.","6. Setelah diaduk, sampah baru bisa dimasukkan dengan cara layering dan ulangi langkah-langkahnya.","8. Air lindi akan keluar dalam waktu 2-4 minggu pertama.","10. Jika sudah mau dipanen, jangan menambahkan sampah lagi ke dalam komposter dan tetap aduk sesuai jadwal.",""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
             //Set wanted position and size (frame)
             myView.frame = frame
             myView.labelAtas.text = desc[index]
-            myView.fotoAtas.image = UIImage(named: images[index])
+//            myView.fotoAtas.image = UIImage(named: images[index])
             myView.labelBawah.text = desc2[index]
             
             
@@ -43,6 +43,7 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
             self.scrollView.addSubview(myView)
 
             //TODO: set wanted constraints.
+            
         }
         
         scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(images.count)), height: scrollView.frame.size.height)
