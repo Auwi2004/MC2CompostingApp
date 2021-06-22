@@ -22,10 +22,14 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+                scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(desc.count), height: view.frame.height)
+                scrollView.isPagingEnabled = true
+
         pageControl.numberOfPages = desc.count
         for index in 0..<desc.count {
-            frame.origin.x = scrollView.frame.size.width * CGFloat(index)
-            frame.size = scrollView.frame.size
+//            frame.origin.x = scrollView.frame.size.width * CGFloat(index)
+//            frame.size = scrollView.frame.size
             
             let allViewsInXibArray = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)
 
@@ -33,7 +37,7 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
             let myView = allViewsInXibArray?.first as! Slide
             
             //Set wanted position and size (frame)
-            myView.frame = frame
+            myView.frame = CGRect(x: view.frame.width * CGFloat(index), y: 0, width: view.frame.width, height: view.frame.height)
             myView.labelAtas.text = desc[index]
 //            myView.fotoAtas.image = UIImage(named: images[index])
             myView.labelBawah.text = desc2[index]
@@ -46,13 +50,15 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
             
         }
         
-        scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(images.count)), height: scrollView.frame.size.height)
+//        scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(images.count)), height: scrollView.frame.size.height)
         scrollView.delegate = self
+        
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        pageControl.frame = CGRect(x:  10, y: view.frame.size.height-150, width: view.frame.size.width-20, height: 70)
+//        pageControl.frame = CGRect(x:  10, y: view.frame.size.height-150, width: view.frame.size.width-20, height: 70)
     }
     
     //scrollview method
@@ -62,8 +68,6 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
         
     }
 
-
-}
 
         // Do any additional setup after loading the view.
         // Set Up first view controller
@@ -78,3 +82,4 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+}

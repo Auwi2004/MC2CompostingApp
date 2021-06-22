@@ -32,7 +32,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6mU-41-0Xs">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6mU-41-0Xs">
                     <rect key="frame" x="20" y="300.5" width="374" height="201"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="201" id="7Hd-eP-9Fo"/>
@@ -42,18 +42,18 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="TG2-Fh-gMC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="036-Ac-kAK"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eFR-Pe-w1A" secondAttribute="trailing" constant="20" id="66p-5v-uKR"/>
-                <constraint firstItem="DlV-Ao-HoF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="7Pf-qo-ca5"/>
-                <constraint firstItem="eFR-Pe-w1A" firstAttribute="top" secondItem="6mU-41-0Xs" secondAttribute="bottom" constant="5" id="HFG-Cm-51J"/>
-                <constraint firstItem="6mU-41-0Xs" firstAttribute="top" secondItem="DlV-Ao-HoF" secondAttribute="bottom" constant="30" id="Qo5-Ra-Cpb"/>
-                <constraint firstItem="DlV-Ao-HoF" firstAttribute="top" secondItem="TG2-Fh-gMC" secondAttribute="bottom" constant="5" id="RrX-Pt-bNL"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6mU-41-0Xs" secondAttribute="trailing" constant="20" id="UIp-y0-OTM"/>
-                <constraint firstItem="eFR-Pe-w1A" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="VQ2-Fc-ur6"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TG2-Fh-gMC" secondAttribute="trailing" constant="20" id="Vo9-4S-5MQ"/>
-                <constraint firstItem="6mU-41-0Xs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="WPH-GT-lbr"/>
-                <constraint firstItem="TG2-Fh-gMC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Y7l-8w-xoh"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DlV-Ao-HoF" secondAttribute="trailing" constant="20" id="wFd-7v-AJ0"/>
+                <constraint firstItem="eFR-Pe-w1A" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="AZh-aa-sUF"/>
+                <constraint firstItem="TG2-Fh-gMC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="AjY-Gd-tY0"/>
+                <constraint firstItem="6mU-41-0Xs" firstAttribute="top" secondItem="DlV-Ao-HoF" secondAttribute="bottom" constant="30" id="Boc-oV-ZXv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TG2-Fh-gMC" secondAttribute="trailing" constant="20" id="Sr3-44-tcs"/>
+                <constraint firstItem="DlV-Ao-HoF" firstAttribute="top" secondItem="TG2-Fh-gMC" secondAttribute="bottom" constant="5" id="ZWb-Lq-VrT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eFR-Pe-w1A" secondAttribute="trailing" constant="20" id="bmz-Qv-Vtp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DlV-Ao-HoF" secondAttribute="trailing" constant="20" id="ku9-Iw-ic0"/>
+                <constraint firstItem="TG2-Fh-gMC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="nFC-BR-wgl"/>
+                <constraint firstItem="DlV-Ao-HoF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="nrZ-HR-65N"/>
+                <constraint firstItem="eFR-Pe-w1A" firstAttribute="top" secondItem="6mU-41-0Xs" secondAttribute="bottom" constant="5" id="vrW-AU-GAE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6mU-41-0Xs" secondAttribute="trailing" constant="20" id="zm4-oQ-u7N"/>
+                <constraint firstItem="6mU-41-0Xs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="zwo-Xs-Zth"/>
             </constraints>
             <connections>
                 <outlet property="fotoAtas" destination="TG2-Fh-gMC" id="PAA-rY-0RQ"/>
