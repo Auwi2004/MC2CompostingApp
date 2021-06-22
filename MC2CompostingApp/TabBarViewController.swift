@@ -39,7 +39,7 @@ class TabBarViewController: UIViewController, UIScrollViewDelegate {
             //Set wanted position and size (frame)
             myView.frame = CGRect(x: view.frame.width * CGFloat(index), y: 0, width: view.frame.width, height: view.frame.height)
             myView.labelAtas.text = desc[index]
-//            myView.fotoAtas.image = UIImage(named: images[index])
+            myView.fotoAtas.image = UIImage(named: images[index])
             myView.labelBawah.text = desc2[index]
             
             
