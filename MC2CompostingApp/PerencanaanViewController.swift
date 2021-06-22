@@ -24,20 +24,20 @@ class PerencanaanViewController: UIViewController {
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    @objc func clickedView3bulan() {
-        var reminder = UIStoryboard(name: "SetReminder", bundle: nil)
-        let vc = reminder.instantiateViewController(identifier: "SetReminderVC") as! SetReminderViewController
-        vc.text = "3 bulan"
-
-        self.navigationController?.pushViewController(vc, animated: true)
-
-    }
-    @objc func clickedView6bulan() {
-        var reminder = UIStoryboard(name: "SetReminder", bundle: nil)
-        let vc = reminder.instantiateViewController(identifier: "SetReminderVC") as! SetReminderViewController
-        vc.text = "6 bulan"
-
-        self.navigationController?.pushViewController(vc, animated: true)
+//    @objc func clickedView3bulan() {
+//        var reminder = UIStoryboard(name: "SetReminder", bundle: nil)
+//        let vc = reminder.instantiateViewController(identifier: "SetReminderVC") as! SetReminderViewController
+//        vc.text = "3 bulan"
+//
+//        self.navigationController?.pushViewController(vc, animated: true)
+//
+//    }
+//    @objc func clickedView6bulan() {
+//        var reminder = UIStoryboard(name: "SetReminder", bundle: nil)
+//        let vc = reminder.instantiateViewController(identifier: "SetReminderVC") as! SetReminderViewController
+//        vc.text = "6 bulan"
+//
+//        self.navigationController?.pushViewController(vc, animated: true)
     
     
     override func viewDidLoad() {
@@ -47,13 +47,13 @@ class PerencanaanViewController: UIViewController {
         view2bulan.addGestureRecognizer(view2bulantapgesture)
         view2bulan.isUserInteractionEnabled = true
 
-        let view3bulantapgesture = UITapGestureRecognizer(target: self, action: #selector(clickedView3bulan))
-        view3bulan.addGestureRecognizer(view3bulantapgesture)
-        view3bulan.isUserInteractionEnabled = true
-
-        let view6bulantapgesture = UITapGestureRecognizer(target: self, action: #selector(clickedView6bulan))
-        view6bulan.addGestureRecognizer(view6bulantapgesture)
-        view6bulan.isUserInteractionEnabled = true
+//        let view3bulantapgesture = UITapGestureRecognizer(target: self, action: #selector(clickedView3bulan))
+//        view3bulan.addGestureRecognizer(view3bulantapgesture)
+//        view3bulan.isUserInteractionEnabled = true
+//
+//        let view6bulantapgesture = UITapGestureRecognizer(target: self, action: #selector(clickedView6bulan))
+//        view6bulan.addGestureRecognizer(view6bulantapgesture)
+//        view6bulan.isUserInteractionEnabled = true
         
     //ini kalau pakai button
 

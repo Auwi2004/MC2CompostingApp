@@ -4,11 +4,10 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Perencanaan View Controller-->
+        <!--Perencanaan-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="PerencanaanViewController" customModule="MC2CompostingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,15 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pilih Waktu Panen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMq-EM-NeG">
-                                <rect key="frame" x="20" y="142" width="136" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aco-3i-hKZ">
-                                <rect key="frame" x="20" y="344" width="374" height="148"/>
+                                <rect key="frame" x="20" y="458" width="374" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zq-NP-cMg">
@@ -41,7 +33,7 @@
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cO3-Nv-O8e">
-                                <rect key="frame" x="20" y="511" width="374" height="153"/>
+                                <rect key="frame" x="20" y="625" width="374" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulg-by-48E">
@@ -57,25 +49,64 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8yf-6i-4UA">
-                                <rect key="frame" x="20" y="171" width="374" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yf-6i-4UA">
+                                <rect key="frame" x="20" y="171" width="374" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2bulan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRN-Yu-HHt">
-                                        <rect key="frame" x="166" y="67" width="52" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mkv-R4-AVo">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="163"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="163" id="0dt-FI-W0Q"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 bulan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRN-Yu-HHt">
+                                        <rect key="frame" x="8" y="168" width="76" height="27"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIe-dO-TT0">
+                                        <rect key="frame" x="8" y="195" width="366" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="BCS-WQ-7bl"/>
+                                        </constraints>
+                                        <string key="text">Durasi hingga panen 2 bulan dan hanya bisa memasukkan material di awal proses
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Mkv-R4-AVo" firstAttribute="top" secondItem="8yf-6i-4UA" secondAttribute="top" id="1h1-qi-PKj"/>
+                                    <constraint firstItem="yRN-Yu-HHt" firstAttribute="leading" secondItem="8yf-6i-4UA" secondAttribute="leading" constant="8" id="2Hc-aR-p4K"/>
+                                    <constraint firstItem="Mkv-R4-AVo" firstAttribute="trailing" secondItem="ZIe-dO-TT0" secondAttribute="trailing" id="ASd-MA-neS"/>
+                                    <constraint firstItem="yRN-Yu-HHt" firstAttribute="top" secondItem="Mkv-R4-AVo" secondAttribute="bottom" constant="5" id="AwL-go-21p"/>
+                                    <constraint firstItem="Mkv-R4-AVo" firstAttribute="centerX" secondItem="8yf-6i-4UA" secondAttribute="centerX" id="CX6-9V-DRl"/>
+                                    <constraint firstItem="Mkv-R4-AVo" firstAttribute="leading" secondItem="8yf-6i-4UA" secondAttribute="leading" id="KjV-Xd-eal"/>
+                                    <constraint firstAttribute="height" constant="250" id="Psp-M8-O7s"/>
+                                    <constraint firstItem="ZIe-dO-TT0" firstAttribute="top" secondItem="yRN-Yu-HHt" secondAttribute="bottom" id="gxF-Ea-FnE"/>
+                                    <constraint firstItem="ZIe-dO-TT0" firstAttribute="leading" secondItem="8yf-6i-4UA" secondAttribute="leading" constant="8" id="kXb-bL-Cme"/>
+                                </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilih Waktu Panen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMq-EM-NeG">
+                                <rect key="frame" x="20" y="143" width="153.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94913703199999999" green="0.9567015767" blue="0.96470838790000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8yf-6i-4UA" secondAttribute="trailing" constant="20" id="8cD-EF-a3W"/>
+                            <constraint firstItem="WMq-EM-NeG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="HRd-92-bVp"/>
+                            <constraint firstItem="WMq-EM-NeG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="3" id="hVF-cO-d2J"/>
+                            <constraint firstItem="8yf-6i-4UA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="yGW-ev-Syj"/>
+                            <constraint firstItem="8yf-6i-4UA" firstAttribute="top" secondItem="WMq-EM-NeG" secondAttribute="bottom" constant="6.5" id="zFL-jM-uKf"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ygx-0e-MD5"/>
+                    <navigationItem key="navigationItem" title="Perencanaan" id="Ygx-0e-MD5"/>
                     <connections>
                         <outlet property="button3bulan" destination="2Zq-NP-cMg" id="BdE-8V-jV9"/>
                         <outlet property="button6bulan" destination="Ulg-by-48E" id="g8i-fu-sbC"/>
@@ -107,6 +138,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="FTD-yJ-RAb">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -118,9 +150,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
