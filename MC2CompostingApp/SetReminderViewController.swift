@@ -25,7 +25,7 @@ class SetReminderViewController: UIViewController, UIPickerViewDataSource, UIPic
     }
     
     
-    @IBOutlet weak var textFieldJam: UITextField!
+ 
     @IBOutlet weak var labelpengingat: UILabel!
     @IBOutlet weak var labelsetiap: UILabel!
     @IBOutlet weak var labeljam: UILabel!
