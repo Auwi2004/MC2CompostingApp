@@ -18,18 +18,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cO3-Nv-O8e">
                                 <rect key="frame" x="20" y="671" width="374" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulg-by-48E">
-                                        <rect key="frame" x="137" y="49" width="51" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="6 bulan">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="action6bulan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="odr-gp-0fs"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yf-6i-4UA">
@@ -87,18 +75,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aco-3i-hKZ">
                                 <rect key="frame" x="20" y="458" width="374" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zq-NP-cMg">
-                                        <rect key="frame" x="118" y="33" width="139" height="83"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="3 bulan">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="action3bulan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EoE-AX-Ktp"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -114,8 +90,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Perencanaan" id="Ygx-0e-MD5"/>
                     <connections>
-                        <outlet property="button3bulan" destination="2Zq-NP-cMg" id="BdE-8V-jV9"/>
-                        <outlet property="button6bulan" destination="Ulg-by-48E" id="g8i-fu-sbC"/>
                         <outlet property="labelpilih" destination="WMq-EM-NeG" id="nxH-Bp-PQq"/>
                         <outlet property="scrollView" destination="5EZ-qb-Rvc" id="JIv-k2-0xu"/>
                         <outlet property="view2bulan" destination="8yf-6i-4UA" id="tvG-mz-2Ef"/>
