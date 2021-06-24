@@ -52,15 +52,15 @@ class SetReminderViewController: UIViewController, UIPickerViewDataSource, UIPic
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_gb")
         formatter.dateFormat = "HH:mm"
-        textFieldJam.text = formatter.string(from: time)
-        textFieldJam.textColor = .link
+//        textFieldJam.text = formatter.string(from: time)
+//        textFieldJam.textColor = .link
         
         let timePicker = UIDatePicker()
         timePicker.datePickerMode = .time
         timePicker.addTarget(self, action: #selector(timePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
         timePicker.frame.size = CGSize (width: 0, height: 250)
         
-        textFieldJam.inputView = timePicker
+//        textFieldJam.inputView = timePicker
     }
     @objc func timePickerValueChanged(sender :UIDatePicker)
     {
@@ -68,7 +68,7 @@ class SetReminderViewController: UIViewController, UIPickerViewDataSource, UIPic
         let formatter = DateFormatter ()
         formatter.locale = Locale(identifier: "en_gb")
         formatter.dateFormat = "HH:mm"
-        textFieldJam.text = formatter.string(from: sender.date)
+//        textFieldJam.text = formatter.string(from: sender.date)
     }
     
         //set save button dengan muncul alert
