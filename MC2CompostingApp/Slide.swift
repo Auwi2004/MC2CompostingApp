@@ -13,6 +13,7 @@ class Slide: UIView {
     @IBOutlet weak var labelAtas: UILabel!
     @IBOutlet weak var fotoBawah: UIImageView!
     @IBOutlet weak var labelBawah: UILabel!
+    @IBOutlet weak var labelJudul: UILabel!
     
     /*
     // Only override draw() if you perform custom drawing.

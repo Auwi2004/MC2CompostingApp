@@ -10,13 +10,10 @@ import UIKit
 class PerencanaanViewController: UIViewController {
 
     @IBOutlet weak var labelpilih: UILabel!
-    @IBOutlet weak var button2bulan: UIButton!
-    @IBOutlet weak var button3bulan: UIButton!
-    @IBOutlet weak var button6bulan: UIButton!
     @IBOutlet weak var view2bulan: UIView!
     @IBOutlet weak var view3bulan: UIView!
     @IBOutlet weak var view6bulan: UIView!
-    @IBOutlet var scrollView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @objc func clickedView2bulan() {
         let reminder = UIStoryboard(name: "SetReminder", bundle: nil)
@@ -41,10 +38,35 @@ class PerencanaanViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        scrollView.contentOffset = CGPoint.zero
+        
+    }
+    
+    //func warna
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+            )
+            }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        navigationController?.navigationBar.prefersLargeTitles = true
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = UIColorFromRGB(rgbValue: 0xCEE3C2)
+            appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(red: 60/255, green: 77/255, blue: 34/255, alpha: 1.0)]
+
+            navigationController?.navigationBar.tintColor = UIColorFromRGB(rgbValue: 0x3C4D22)
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.compactAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
+//        self.automaticallyAdjustsScrollViewInsets = false
 
         
         let view2bulantapgesture = UITapGestureRecognizer(target: self, action: #selector(clickedView2bulan))
@@ -58,6 +80,7 @@ class PerencanaanViewController: UIViewController {
         let view6bulantapgesture = UITapGestureRecognizer(target: self, action: #selector(clickedView6bulan))
         view6bulan.addGestureRecognizer(view6bulantapgesture)
         view6bulan.isUserInteractionEnabled = true
+        
         
     //ini kalau pakai button
 
