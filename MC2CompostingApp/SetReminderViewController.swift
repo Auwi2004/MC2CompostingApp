@@ -12,6 +12,19 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     var text: String = ""
     
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+            )
+            }
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        return NSAttributedString(string: setiapHari[row], attributes: [NSAttributedString.Key.foregroundColor : UIColorFromRGB(rgbValue: 0x3C4D22)])
+    }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("item dipilih\(setiapHari[row])")
         

@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atur Pengingat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsD-Ya-aBk">
-                                <rect key="frame" x="24" y="156" width="153.66666666666666" height="26.333333333333343"/>
+                                <rect key="frame" x="24" y="69" width="153.66666666666666" height="26.333333333333329"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="0.23529411759999999" green="0.30196078430000001" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYj-Em-f6C">
-                                <rect key="frame" x="24" y="191" width="342" height="169"/>
+                                <rect key="frame" x="24" y="104" width="342" height="169"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zV4-Ua-Bij">
                                         <rect key="frame" x="35" y="109" width="51" height="21"/>
@@ -88,7 +88,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.94913703199999999" green="0.9567015767" blue="0.96470838790000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="IsD-Ya-aBk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="112" id="02E-Gt-JkU"/>
+                            <constraint firstItem="IsD-Ya-aBk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="02E-Gt-JkU"/>
                             <constraint firstItem="fgH-aI-Z53" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="2S1-2d-Xpj"/>
                             <constraint firstItem="FYj-Em-f6C" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="3la-o8-jNJ"/>
                             <constraint firstItem="IsD-Ya-aBk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Bwt-N3-gxu"/>
