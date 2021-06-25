@@ -8,7 +8,10 @@
 import UIKit
 import UserNotifications
 
-class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    var text: String = ""
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("item dipilih\(setiapHari[row])")
         
@@ -34,9 +37,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pilihanHariPicker.dataSource = self
-        pilihanHariPicker.delegate = self
-        
+//        pilihanHariPicker.dataSource = self
+//        pilihanHariPicker.delegate = self
+//        
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.badge, .alert, .sound]){
             (granted, Error) in
@@ -61,9 +64,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         formatter.locale = Locale(identifier: "en_gb")
         formatter.dateFormat = "HH:mm"
         
-        pilihanJamPicker.datePickerMode = .time
-        pilihanJamPicker.addTarget(self, action: #selector(pilihanJamPickerValueChange(sender:)), for: UIControl.Event.valueChanged)
-        pilihanJamPicker.frame.size = CGSize (width: 100, height: 100)
+//        pilihanJamPicker.datePickerMode = .time
+//        pilihanJamPicker.addTarget(self, action: #selector(pilihanJamPickerValueChange(sender:)), for: UIControl.Event.valueChanged)
+//        pilihanJamPicker.frame.size = CGSize (width: 100, height: 100)
         
     }
 
