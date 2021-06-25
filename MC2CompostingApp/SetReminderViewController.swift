@@ -44,6 +44,8 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Pilih Waktu Panen"
+        
         pilihanHariPicker.dataSource = self
         
         pilihanHariPicker.delegate = self
