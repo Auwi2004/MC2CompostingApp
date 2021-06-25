@@ -29,25 +29,33 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         return setiapHari[row]
     }
 
-
+    @IBOutlet weak var pilihanHariPicker: UIPickerView!
+    @IBOutlet weak var pilihanWaktuLabel: UILabel!
+    @IBOutlet weak var pilihanHariLabel: UILabel!
+    @IBOutlet weak var pilihanJamPicker: UIDatePicker!
+    @IBOutlet weak var simpanButton: UIButton!
     
     let setiapHari = ["3 Hari","7 Hari"]
     var selectedDay: String = ""
     var selectedTime: String = ""
     
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        pilihanHariPicker.dataSource = self
-//        pilihanHariPicker.delegate = self
-//        
+        
+        pilihanHariPicker.dataSource = self
+        
+        pilihanHariPicker.delegate = self
+        
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.badge, .alert, .sound]){
             (granted, Error) in
         }
         
         let content = UNMutableNotificationContent()
-        content.title = "Yuhuu... saya notifikasi"
-        content.body = "Lihat saya dong!"
+        content.title = "Pengingat"
+        content.body = "Hai! Cek kegiatan dalam perencaan mu hari ini yuk!"
         
         let date = Date().addingTimeInterval(10) // setelah  5 detik
         let dataComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
@@ -64,25 +72,24 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         formatter.locale = Locale(identifier: "en_gb")
         formatter.dateFormat = "HH:mm"
         
-//        pilihanJamPicker.datePickerMode = .time
-//        pilihanJamPicker.addTarget(self, action: #selector(pilihanJamPickerValueChange(sender:)), for: UIControl.Event.valueChanged)
-//        pilihanJamPicker.frame.size = CGSize (width: 100, height: 100)
+        pilihanJamPicker.datePickerMode = .time
+        pilihanJamPicker.addTarget(self, action: #selector(pilihanJamPickerValueChange(sender:)), for: UIControl.Event.valueChanged)
+        pilihanJamPicker.frame.size = CGSize (width: 100, height: 100)
         
     }
 
     @IBAction func simpan(_ sender: Any) {
 
         //set alert
-        let alert = UIAlertController (title: "Rangkuman", message: "Pengingat akan dikirimkan setiap \(selectedDay) pada jam \(selectedTime) ", preferredStyle: .alert)
+        let alert = UIAlertController (title: "Rangkuman", message: "Pengingat akan dikirimkan setiap \(selectedDay) pada jam \(selectedTime) selama \(text) ", preferredStyle: .alert)
         let setUlang = UIAlertAction(title: "Set Ulang", style: .cancel, handler: nil)
-        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+//        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(setUlang)
-        alert.addAction(ok)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (alertAction) in
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alertAction) in
             let rencana = UIStoryboard(name: "WeeklyPlan1Storyboard", bundle: nil)
-            let vc = rencana.instantiateViewController(identifier: "WeeklyPlan1View") as! WeeklyPlan2ViewController
+            let vc = rencana.instantiateViewController(identifier: "WeeklyPlan1View") as! WeeklyPlan1ViewController
 
-//       vc.selectedWeek = indexPath.item
+
             self.navigationController?.pushViewController(vc, animated: true)
         }))
         
