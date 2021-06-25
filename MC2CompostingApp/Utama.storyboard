@@ -195,6 +195,11 @@
                                                     <constraint firstItem="Xjm-TP-Uad" firstAttribute="top" secondItem="GQM-7g-AME" secondAttribute="bottom" constant="8" symbolic="YES" id="hi8-6e-3sT"/>
                                                     <constraint firstItem="N9N-B2-5YQ" firstAttribute="leading" secondItem="bca-Bd-TLw" secondAttribute="leading" constant="8" id="nRx-jv-REU"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilih Waktu Panen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwR-YR-bxF">
                                                 <rect key="frame" x="20" y="8" width="153.5" height="21.5"/>
@@ -237,6 +242,11 @@
                                                     <constraint firstItem="2jV-sF-F8Q" firstAttribute="top" secondItem="J3f-o0-P2V" secondAttribute="top" id="tFC-EO-xGq"/>
                                                     <constraint firstItem="2jV-sF-F8Q" firstAttribute="leading" secondItem="J3f-o0-P2V" secondAttribute="leading" id="z0h-8E-Cjo"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94913703199999999" green="0.9567015767" blue="0.96470838790000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
