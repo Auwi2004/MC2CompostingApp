@@ -78,6 +78,15 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(setUlang)
         alert.addAction(ok)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (alertAction) in
+            let rencana = UIStoryboard(name: "WeeklyPlan1Storyboard", bundle: nil)
+            let vc = rencana.instantiateViewController(identifier: "WeeklyPlan1View") as! WeeklyPlan2ViewController
+
+//       vc.selectedWeek = indexPath.item
+            self.navigationController?.pushViewController(vc, animated: true)
+        }))
+        
+
         
         //munculkan alert
         present(alert, animated: true, completion: nil)
