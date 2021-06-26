@@ -26,7 +26,7 @@
 		9526275D2684FAAF00908FE5 /* Slides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9526275C2684FAAF00908FE5 /* Slides.swift */; };
 		9526275F2684FACB00908FE5 /* Slides.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9526275E2684FACB00908FE5 /* Slides.xib */; };
 		952627612684FCA700908FE5 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952627602684FCA700908FE5 /* PlannerViewController.swift */; };
-		95AA4DCF268575AE009C886A /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95AA4DCE268575AE009C886A /* MainPage.storyboard */; };
+		95AA4DCF268575AE009C886A /* FinalPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95AA4DCE268575AE009C886A /* FinalPage.storyboard */; };
 		95BA2A222678B85600EB93FF /* SetReminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BA2A212678B85600EB93FF /* SetReminder.storyboard */; };
 		95BA2A242678B86C00EB93FF /* SetReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BA2A232678B86C00EB93FF /* SetReminderViewController.swift */; };
 /* End PBXBuildFile section */
@@ -74,7 +74,7 @@
 		9526275C2684FAAF00908FE5 /* Slides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slides.swift; sourceTree = "<group>"; };
 		9526275E2684FACB00908FE5 /* Slides.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slides.xib; sourceTree = "<group>"; };
 		952627602684FCA700908FE5 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
-		95AA4DCE268575AE009C886A /* MainPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
+		95AA4DCE268575AE009C886A /* FinalPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinalPage.storyboard; sourceTree = "<group>"; };
 		95BA2A212678B85600EB93FF /* SetReminder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetReminder.storyboard; sourceTree = "<group>"; };
 		95BA2A232678B86C00EB93FF /* SetReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,16 +138,16 @@
 				36D5011A2678AE0F00FFD110 /* LaunchScreen.storyboard */,
 				36D501122678AE0E00FFD110 /* Main.storyboard */,
 				952627582684F59900908FE5 /* Utama.storyboard */,
-				9526275A2684F66E00908FE5 /* PanduanViewController.swift */,
-				952627602684FCA700908FE5 /* PlannerViewController.swift */,
 				9526275E2684FACB00908FE5 /* Slides.xib */,
 				9526275C2684FAAF00908FE5 /* Slides.swift */,
+				9526275A2684F66E00908FE5 /* PanduanViewController.swift */,
+				952627602684FCA700908FE5 /* PlannerViewController.swift */,
 				95BA2A212678B85600EB93FF /* SetReminder.storyboard */,
 				95BA2A232678B86C00EB93FF /* SetReminderViewController.swift */,
+				95AA4DCE268575AE009C886A /* FinalPage.storyboard */,
 				36D501182678AE0F00FFD110 /* Assets.xcassets */,
 				36D5011D2678AE0F00FFD110 /* Info.plist */,
 				36D501152678AE0E00FFD110 /* MC2CompostingApp.xcdatamodeld */,
-				95AA4DCE268575AE009C886A /* MainPage.storyboard */,
 			);
 			path = MC2CompostingApp;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 				36D501192678AE0F00FFD110 /* Assets.xcassets in Resources */,
 				8359E50026857A4600797793 /* WeeklyPlan1Storyboard.storyboard in Resources */,
 				9526275F2684FACB00908FE5 /* Slides.xib in Resources */,
-				95AA4DCF268575AE009C886A /* MainPage.storyboard in Resources */,
+				95AA4DCF268575AE009C886A /* FinalPage.storyboard in Resources */,
 				8359E4FE26857A4600797793 /* WeeklyPlan2Storyboard.storyboard in Resources */,
 				36D501142678AE0E00FFD110 /* Main.storyboard in Resources */,
 				952627592684F59900908FE5 /* Utama.storyboard in Resources */,
