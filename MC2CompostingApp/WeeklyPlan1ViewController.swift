@@ -90,5 +90,26 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
         vc.selectedWeek = indexPath.item
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
 
-}
+//BUAT ALERT DI BACK BUTTON??
+
+//    @IBAction func backButton (_ sender: Any) {
+//        let alert = UIAlertController (title: "Reset", message: "Apakah kamu yakin mau mengatur ulang kegiatan ini?", preferredStyle: .alert)
+//        let tidak = UIAlertAction(title: "Tidak", style: .cancel, handler: nil)
+////        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+//        alert.addAction(tidak)
+//        alert.addAction(UIAlertAction(title: "Ya", style: .default, handler: { (alertAction) in
+//            let rencana = UIStoryboard(name: "WeeklyPlan1Storyboard", bundle: nil)
+//            let vc = rencana.instantiateViewController(identifier: "WeeklyPlan1View") as! WeeklyPlan1ViewController
+//
+//
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }))
+//
+//
+//
+//        //munculkan alert
+//        present(alert, animated: true, completion: nil)
+//
+//}
