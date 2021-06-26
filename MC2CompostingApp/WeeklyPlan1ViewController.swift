@@ -17,7 +17,7 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
     var minggu = [String]()
     var pilihbulan: Int = 0
     var selectWeek: Int = 0
-    var selectedWeek: [Bool] = [false, false, false, false, false, false, ]
+//    var selectedWeek: [Bool] = [false, false, false, false, false, false, ]
     var userDefaults = UserDefaults.standard // digunakan untuk menimpan BULAN, WEEK, SUBWEEK
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -29,7 +29,7 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
         collectionView.dataSource = self
         
         userDefaults.setValue(0, forKey: "CHECK") // dummy: disimpan di halaman yang lain
-        userDefaults.setValue(3, forKey: "BULAN") // dummy: disimpan di halaman yang lain
+        userDefaults.setValue(12, forKey: "BULAN") // dummy: disimpan di halaman yang lain
         pilihbulan = userDefaults.value(forKey: "BULAN") as! Int // ambil data BULAN yang dipilih dari halaman lain
         print(pilihbulan)
         
@@ -69,15 +69,21 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! WeeklyPlan1CollectionViewCell
-        
         cell.myLabel.text = minggu[indexPath.item]
-//        print("Test")
+        cell.contentView.backgroundColor = UIColor(red: 201/255, green: 202/255, blue: 206/255, alpha: 100/255)
+            
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Minggu yang dikirim", indexPath.item)  // cek yang dipilih
+        
+        if let cell = collectionView.cellForItem(at: indexPath ) {
+            cell.contentView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 100/255)
+        }
 
+        // Move to next VC
+        
         let rencana = UIStoryboard(name: "WeeklyPlan2Storyboard", bundle: nil)
         let vc = rencana.instantiateViewController(identifier: "WeeklyPlan2View") as! WeeklyPlan2ViewController
         
