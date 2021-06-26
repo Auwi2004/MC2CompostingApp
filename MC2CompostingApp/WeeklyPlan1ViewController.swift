@@ -112,4 +112,4 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
 //        //munculkan alert
 //        present(alert, animated: true, completion: nil)
 //
-//}
+}

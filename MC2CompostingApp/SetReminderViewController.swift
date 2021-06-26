@@ -2,7 +2,7 @@
 //  SetReminderViewController.swift
 //  MC2CompostingApp
 //
-//  Created by Catharina Benita Irawan on 15/06/21.
+//  Created by Puri Aprianty on 15/06/21.
 //
 
 import UIKit
@@ -51,6 +51,8 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
     let setiapHari = ["3 Hari","7 Hari"]
     var selectedDay: String = ""
     var selectedTime: String = ""
+    var waktuTigaHari = 259200
+    var waktuTujuhHari = 604800
     
     
 
@@ -72,6 +74,7 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         content.title = "Pengingat"
         content.body = "Hai! Cek kegiatan dalam perencaan mu hari ini yuk!"
         
+        //triger notifikasi
         let date = Date().addingTimeInterval(5) // setelah  5 detik
         let dataComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dataComponents, repeats: false)
@@ -98,6 +101,7 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         //set alert
         let alert = UIAlertController (title: "Rangkuman", message: "Pengingat akan dikirimkan setiap \(selectedDay) pada jam \(selectedTime) selama \(text) ", preferredStyle: .alert)
         let setUlang = UIAlertAction(title: "Set Ulang", style: .cancel, handler: nil)
+        
 //        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(setUlang)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alertAction) in
@@ -124,3 +128,6 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     
     }
+
+//if text && selectedDay
+//else selected time
