@@ -75,9 +75,18 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         content.body = "Hai! Cek kegiatan dalam perencaan mu hari ini yuk!"
         
         //triger notifikasi
-        let date = Date().addingTimeInterval(5) // setelah  5 detik
-        let dataComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dataComponents, repeats: false)
+//        let date = Date().addingTimeInterval(5) // setelah  5 detik
+//        let dataComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        
+        var dateComponents = DateComponents()
+        
+        dateComponents.calendar = Calendar.current
+//        pengulangan notifikasi di waktu tertentu
+        dateComponents.weekday = 3
+        dateComponents.hour = 8
+        dateComponents.minute = 20
+    
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         let uuidString = UUID().uuidString
         let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
