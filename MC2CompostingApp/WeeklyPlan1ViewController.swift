@@ -9,9 +9,9 @@ import UIKit
 
 class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
 
-    let minggu1: [String] = ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8"]
-    let minggu2: [String] = ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11", "Week 12"]
-    let minggu3: [String] = ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11", "Week 12", "Week 13", "Week14", "Week 15", "Week 16", "Week 17", "Week 18", "Week 19", "Week 20", "Week 21", "Week 22", "Week 23", "Week 24"]
+    let minggu1: [String] = ["1", "2", "3", "4", "5", "6", "7", "8"]
+    let minggu2: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+    let minggu3: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
     let layout = UICollectionViewFlowLayout()
     
     var minggu = [String]()
