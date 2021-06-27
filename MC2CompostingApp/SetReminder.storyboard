@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,10 +37,13 @@
                                         <color key="textColor" red="0.23529411759999999" green="0.30196078430000001" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMx-Ic-n4a">
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMx-Ic-n4a">
                                         <rect key="frame" x="151" y="2" width="183" height="85"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.22697871920000001" green="0.31558006999999999" blue="0.1176005527" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="85" id="L3c-rM-L4m"/>
+                                            <constraint firstAttribute="width" constant="183" id="lrB-eh-mYY"/>
+                                        </constraints>
                                     </pickerView>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="8b6-MJ-cMh">
                                         <rect key="frame" x="174" y="88" width="136" height="50"/>
@@ -52,6 +55,7 @@
                                     <constraint firstItem="8b6-MJ-cMh" firstAttribute="leading" secondItem="zV4-Ua-Bij" secondAttribute="trailing" constant="88" id="5HK-ph-dFp"/>
                                     <constraint firstItem="zV4-Ua-Bij" firstAttribute="leading" secondItem="pV6-Mv-tku" secondAttribute="leading" id="6f9-KM-LXt"/>
                                     <constraint firstItem="zV4-Ua-Bij" firstAttribute="leading" secondItem="FYj-Em-f6C" secondAttribute="leading" constant="35" id="EYD-dS-mO4"/>
+                                    <constraint firstItem="dMx-Ic-n4a" firstAttribute="top" secondItem="FYj-Em-f6C" secondAttribute="top" constant="2" id="Eiw-gx-dcV"/>
                                     <constraint firstAttribute="trailing" secondItem="8b6-MJ-cMh" secondAttribute="trailing" constant="32" id="FoW-rZ-23X"/>
                                     <constraint firstAttribute="bottom" secondItem="zV4-Ua-Bij" secondAttribute="bottom" constant="39" id="O5I-EY-pNU"/>
                                     <constraint firstItem="pV6-Mv-tku" firstAttribute="leading" secondItem="FYj-Em-f6C" secondAttribute="leading" constant="35" id="Tcr-x2-ZHZ"/>
@@ -59,6 +63,7 @@
                                     <constraint firstItem="zV4-Ua-Bij" firstAttribute="trailing" secondItem="pV6-Mv-tku" secondAttribute="trailing" id="dVO-Cw-aHZ"/>
                                     <constraint firstItem="pV6-Mv-tku" firstAttribute="top" secondItem="FYj-Em-f6C" secondAttribute="top" constant="31" id="mwi-jg-Ug1"/>
                                     <constraint firstItem="8b6-MJ-cMh" firstAttribute="top" secondItem="FYj-Em-f6C" secondAttribute="top" constant="88" id="n9c-au-Grg"/>
+                                    <constraint firstAttribute="trailing" secondItem="dMx-Ic-n4a" secondAttribute="trailing" constant="8" id="rIT-pm-eoj"/>
                                     <constraint firstAttribute="bottom" secondItem="8b6-MJ-cMh" secondAttribute="bottom" constant="31" id="rec-Qw-gak"/>
                                     <constraint firstItem="zV4-Ua-Bij" firstAttribute="centerX" secondItem="pV6-Mv-tku" secondAttribute="centerX" id="yYJ-DA-nsF"/>
                                 </constraints>

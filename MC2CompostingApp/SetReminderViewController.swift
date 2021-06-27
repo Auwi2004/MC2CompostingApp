@@ -65,39 +65,8 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         
         pilihanHariPicker.delegate = self
         
-//        let center = UNUserNotificationCenter.current()
-//        center.requestAuthorization(options: [.badge, .alert, .sound]){
-//            (granted, Error) in
-//        }
-//
-//        let content = UNMutableNotificationContent()
-//        content.title = "Pengingat"
-//        content.body = "Hai! Cek kegiatan dalam perencaan mu hari ini yuk!"
-//
-        //triger notifikasi
-//        let date = Date().addingTimeInterval(5) // setelah  5 detik
-//        let dataComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
-        
-//        var dateComponents = DateComponents()
-//
-//        dateComponents.calendar = Calendar.current
-////        pengulangan notifikasi di waktu tertentu
-//        dateComponents.weekday = 3
-//        dateComponents.hour = 8
-//        dateComponents.minute = 20
-//
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-//
-//        let uuidString = UUID().uuidString
-//        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
-//
-//        center.add(request) {(error) in
-//            // Check the error parameter and handle any error
-//        }
-        
-      
-        
-        
+
+
         //setup picker
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_gb")
@@ -107,10 +76,7 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         pilihanJamPicker.addTarget(self, action: #selector(pilihanJamPickerValueChange(sender:)), for: UIControl.Event.valueChanged)
         pilihanJamPicker.frame.size = CGSize (width: 100, height: 100)
         
-        
-        
-       
-        
+
     }
     
     
@@ -132,7 +98,6 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
                 dateComponents.day = i
                 dateComponents.hour =  cal.component(.hour, from: pilihanJamPicker.date)
                 dateComponents.minute =  cal.component(.minute, from: pilihanJamPicker.date)
-//                dateComponents.minute = 20
                 
 //                dump(dateComponents)
             
@@ -160,14 +125,8 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         }
     }
     func createDailyNotif2(gapDays:Int,monthPeriod:Int){
-        //detect sekarang hari apa
-        //3 hari dari hari minggu sampe 3 bulan kedapan apa aja
-//        let date = Date()
-//        let cal = Calendar.current
-//        let tanggalSekarang = cal.component(.day, from: date)
-        
        
-        
+    
         for i in 5...waktuTigaHari*monthPeriod*10{
             if (i - waktuTigaHari) % waktuTigaHari == 0 || i==10{
                 let triger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(i), repeats: false)
@@ -225,20 +184,7 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     }
 
-//if text && selectedDay
-//else selected time
-
-//func notifikasiDuaBulanTigaHari() {
-//if text && selectedDay {
-//   notifikasi in selectedTime
-//}
-//}
-
-//func notifikasiDuaBulanTujuhHari() {
-//if text && selectedDay {
-//   notifikasi in selectedTime
-//}
-//}
+//ambil Integer dari data String
 extension Int {
     static func parse(from string:String)->Int?{
         return Int(string.components(separatedBy: CharacterSet.decimalDigits.inverted).joined())
