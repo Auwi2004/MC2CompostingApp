@@ -95,6 +95,8 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
             // Check the error parameter and handle any error
         }
         
+        
+        //setup picker
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_gb")
         formatter.dateFormat = "HH:mm"
@@ -103,6 +105,48 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         pilihanJamPicker.addTarget(self, action: #selector(pilihanJamPickerValueChange(sender:)), for: UIControl.Event.valueChanged)
         pilihanJamPicker.frame.size = CGSize (width: 100, height: 100)
         
+        
+        
+       
+        
+    }
+    
+    
+    func createDailyNotif(gapDays:Int,monthPeriod:Int){
+        //detect sekarang hari apa
+        //3 hari dari hari minggu sampe 3 bulan kedapan apa aja
+        let date = Date()
+        let cal = Calendar.current
+        let tanggalSekarang = cal.component(.day, from: date)
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.badge, .alert, .sound]){
+            (granted, Error) in
+        }
+        for i in tanggalSekarang...tanggalSekarang+monthPeriod{
+            if (i-tanggalSekarang)%gapDays == 0{
+                var dateComponents = DateComponents()
+                
+                dateComponents.calendar = Calendar.current
+        //        pengulangan notifikasi di waktu tertentu
+                dateComponents.day = i
+                dateComponents.hour =  cal.component(.hour, from: pilihanJamPicker.date)
+                dateComponents.minute =  cal.component(.minute, from: pilihanJamPicker.date)
+//                dateComponents.minute = 20
+            
+                let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+                
+                let uuidString = UUID().uuidString
+                let content = UNMutableNotificationContent()
+                content.title = "Pengingat"
+                content.body = "Hai! Cek kegiatan dalam perencaan mu hari ini yuk!"
+                let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+                
+                center.add(request) {(error) in
+                    // Check the error parameter and handle any error
+                }
+            }
+        }
     }
 
     @IBAction func simpan(_ sender: Any) {
@@ -113,12 +157,21 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         
 //        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(setUlang)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alertAction) in
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] (alertAction) in
+            
+            guard let hari = Int.parse(from: self?.selectedDay ?? "") else {
+                return
+            }
+            guard let month = Int.parse(from: self?.text ?? "") else {
+                return
+            }
+            
+            self?.createDailyNotif(gapDays: hari, monthPeriod: month)
             let rencana = UIStoryboard(name: "WeeklyPlan1Storyboard", bundle: nil)
             let vc = rencana.instantiateViewController(identifier: "WeeklyPlan1View") as! WeeklyPlan1ViewController
+            
 
-
-            self.navigationController?.pushViewController(vc, animated: true)
+            self?.navigationController?.pushViewController(vc, animated: true)
         }))
         
 
@@ -140,3 +193,20 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
 
 //if text && selectedDay
 //else selected time
+
+//func notifikasiDuaBulanTigaHari() {
+//if text && selectedDay {
+//   notifikasi in selectedTime
+//}
+//}
+
+//func notifikasiDuaBulanTujuhHari() {
+//if text && selectedDay {
+//   notifikasi in selectedTime
+//}
+//}
+extension Int {
+    static func parse(from string:String)->Int?{
+        return Int(string.components(separatedBy: CharacterSet.decimalDigits.inverted).joined())
+    }
+}
