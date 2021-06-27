@@ -110,7 +110,7 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.size.width/3.2), height: (view.frame.size.width/3.2))
+        return CGSize(width: (view.frame.size.width/3.45), height: (view.frame.size.width/3.45))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +26,7 @@ Yuk, lanjutkan terus kegiatan ini!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ts-kO-Ern">
-                                <rect key="frame" x="36" y="636" width="342" height="49"/>
+                                <rect key="frame" x="36" y="651" width="342" height="34"/>
                                 <color key="backgroundColor" red="0.99716860060000001" green="0.68353021140000003" blue="0.16052645439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="OK">
@@ -48,7 +48,6 @@ Yuk, lanjutkan terus kegiatan ini!</string>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1ts-kO-Ern" secondAttribute="bottom" constant="177" id="gvK-DQ-lU2"/>
                             <constraint firstItem="vEj-UM-cUW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="58" id="i9E-Zd-qB8"/>
                             <constraint firstItem="1ts-kO-Ern" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="sWR-na-Hc3"/>
-                            <constraint firstItem="1ts-kO-Ern" firstAttribute="top" secondItem="vEj-UM-cUW" secondAttribute="bottom" constant="153" id="z3r-v6-EA4"/>
                         </constraints>
                     </view>
                 </viewController>
