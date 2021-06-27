@@ -15,26 +15,31 @@ class PlannerViewController: UIViewController {
     @IBOutlet weak var view6bulan: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    var userDefaults = UserDefaults.standard // digunakan untuk menimpan MONTH, WEEK etc... (Dian)
+    
+    
+    
+    
     @objc func clickedView2bulan() {
         let reminder = UIStoryboard(name: "SetReminder", bundle: nil)
         let vc = reminder.instantiateViewController(identifier: "SetReminderVC") as! SetReminderViewController
         vc.text = "2 bulan"
-        
+        userDefaults.setValue(2, forKey: "MONTH")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @objc func clickedView3bulan() {
-        var reminder = UIStoryboard(name: "SetReminder", bundle: nil)
+        let reminder = UIStoryboard(name: "SetReminder", bundle: nil)
         let vc = reminder.instantiateViewController(identifier: "SetReminderVC") as! SetReminderViewController
         vc.text = "3 bulan"
-
+        userDefaults.setValue(3, forKey: "MONTH")
         self.navigationController?.pushViewController(vc, animated: true)
 
     }
     @objc func clickedView6bulan() {
-        var reminder = UIStoryboard(name: "SetReminder", bundle: nil)
+        let reminder = UIStoryboard(name: "SetReminder", bundle: nil)
         let vc = reminder.instantiateViewController(identifier: "SetReminderVC") as! SetReminderViewController
         vc.text = "6 bulan"
-
+        userDefaults.setValue(6, forKey: "MONTH")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -53,6 +58,9 @@ class PlannerViewController: UIViewController {
             alpha: CGFloat(1.0)
             )
             }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,5 +88,44 @@ class PlannerViewController: UIViewController {
         let view6bulantapgesture = UITapGestureRecognizer(target: self, action: #selector(clickedView6bulan))
         view6bulan.addGestureRecognizer(view6bulantapgesture)
         view6bulan.isUserInteractionEnabled = true
+        
+        // nitip variable global yah...
+        userDefaults.setValue(0, forKey: "MONTH")
+        userDefaults.setValue(0, forKey: "WEEK")
+        userDefaults.setValue(0, forKey: "ENWEEK")
+        userDefaults.setValue(true, forKey: "ENWEEK1")
+        userDefaults.setValue(false, forKey: "ENWEEK2")
+        userDefaults.setValue(false, forKey: "ENWEEK3")
+        userDefaults.setValue(false, forKey: "ENWEEK4")
+        userDefaults.setValue(false, forKey: "ENWEEK5")
+        userDefaults.setValue(false, forKey: "ENWEEK6")
+        userDefaults.setValue(false, forKey: "ENWEEK7")
+        userDefaults.setValue(false, forKey: "ENWEEK8")
+        userDefaults.setValue(false, forKey: "ENWEEK9")
+        userDefaults.setValue(false, forKey: "ENWEEK10")
+        userDefaults.setValue(false, forKey: "ENWEEK11")
+        userDefaults.setValue(false, forKey: "ENWEEK12")
+        userDefaults.setValue(false, forKey: "ENWEEK13")
+        userDefaults.setValue(false, forKey: "ENWEEK14")
+        userDefaults.setValue(false, forKey: "ENWEEK15")
+        userDefaults.setValue(false, forKey: "ENWEEK16")
+        userDefaults.setValue(false, forKey: "ENWEEK17")
+        userDefaults.setValue(false, forKey: "ENWEEK18")
+        userDefaults.setValue(false, forKey: "ENWEEK19")
+        userDefaults.setValue(false, forKey: "ENWEEK20")
+        userDefaults.setValue(false, forKey: "ENWEEK21")
+        userDefaults.setValue(false, forKey: "ENWEEK22")
+        userDefaults.setValue(false, forKey: "ENWEEK23")
+        userDefaults.setValue(false, forKey: "ENWEEK24")
+        userDefaults.setValue(false, forKey: "CHECK")
+        userDefaults.setValue(false, forKey: "CHECK1")
+        userDefaults.setValue(false, forKey: "CHECK2")
+        userDefaults.setValue(false, forKey: "CHECK3")
+        userDefaults.setValue(false, forKey: "GREEN")
+        
     }
+    
+
+    
+    
 }

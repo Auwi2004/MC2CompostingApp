@@ -12,13 +12,19 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
     let minggu1: [String] = ["1", "2", "3", "4", "5", "6", "7", "8"]
     let minggu2: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
     let minggu3: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
+    
+    
     let layout = UICollectionViewFlowLayout()
     
     var minggu = [String]()
     var pilihbulan: Int = 0
     var selectWeek: Int = 0
-//    var selectedWeek: [Bool] = [false, false, false, false, false, false, ]
-    var userDefaults = UserDefaults.standard // digunakan untuk menimpan BULAN, WEEK, SUBWEEK
+    var nextPageEnable: Bool = false
+    var enWeek: [Bool] = []
+    var indeks: Int = 0
+    var indCollor: Int = 0
+    var tempBool: Bool = false
+    var userDefaults = UserDefaults.standard // digunakan untuk menimpan BULAN, WEEK dst
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -28,19 +34,21 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        userDefaults.setValue(0, forKey: "CHECK") // dummy: disimpan di halaman yang lain
-        userDefaults.setValue(12, forKey: "BULAN") // dummy: disimpan di halaman yang lain
-        pilihbulan = userDefaults.value(forKey: "BULAN") as! Int // ambil data BULAN yang dipilih dari halaman lain
-        print(pilihbulan)
-        
+        pilihbulan = userDefaults.value(forKey: "MONTH") as! Int // ambil data BULAN yang dipilih dari halaman lain
         selectedMonth() // jumlah minggu sesuai pilihan bulan
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView.reloadData()
+    }
+    
+    
+    
     func selectedMonth(){
-        if (pilihbulan == 3) {
+        if (pilihbulan == 2) {
             minggu = minggu1
-        } else if (pilihbulan == 12) {
+        } else if (pilihbulan == 3) {
             minggu = minggu2
         } else {
             minggu = minggu3
@@ -48,7 +56,7 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.size.width/3.31), height: (view.frame.size.width/3.31))
+        return CGSize(width: (view.frame.size.width/3.2), height: (view.frame.size.width/3.2))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -70,46 +78,115 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! WeeklyPlan1CollectionViewCell
         cell.myLabel.text = minggu[indexPath.item]
-        cell.contentView.backgroundColor = UIColor(red: 201/255, green: 202/255, blue: 206/255, alpha: 100/255)
-            
+//        cell.contentView.backgroundColor = UIColor(red: 201/255, green: 202/255, blue: 206/255, alpha: 100/255)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Minggu yang dikirim", indexPath.item)  // cek yang dipilih
         
-        if let cell = collectionView.cellForItem(at: indexPath ) {
-            cell.contentView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 100/255)
+        // Enable atau tidak?
+        indeks = indexPath.item
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK1") as! Bool, at: 0)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK2") as! Bool, at: 1)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK3") as! Bool, at: 2)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK4") as! Bool, at: 3)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK5") as! Bool, at: 4)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK6") as! Bool, at: 5)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK7") as! Bool, at: 6)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK8") as! Bool, at: 7)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK9") as! Bool, at: 8)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK10") as! Bool, at: 9)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK11") as! Bool, at: 10)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK12") as! Bool, at: 11)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK13") as! Bool, at: 12)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK14") as! Bool, at: 13)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK15") as! Bool, at: 14)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK16") as! Bool, at: 15)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK17") as! Bool, at: 16)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK18") as! Bool, at: 17)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK19") as! Bool, at: 18)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK20") as! Bool, at: 19)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK21") as! Bool, at: 20)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK22") as! Bool, at: 21)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK23") as! Bool, at: 22)
+        enWeek.insert(userDefaults.value(forKey: "ENWEEK24") as! Bool, at: 23)
+            
+        if indeks == 0 && enWeek[0] == true {
+            nextPageEnable = true
+        } else if indeks == 1 && enWeek[1] == true {
+            nextPageEnable = true
+        } else if indeks == 2 && enWeek[2] == true {
+            nextPageEnable = true
+        } else if indeks == 3 && enWeek[3] == true {
+            nextPageEnable = true
+        } else if indeks == 4 && enWeek[4] == true {
+            nextPageEnable = true
+        } else if indeks == 5 && enWeek[5] == true {
+            nextPageEnable = true
+        } else if indeks == 6 && enWeek[6] == true {
+            nextPageEnable = true
+        } else if indeks == 7 && enWeek[7] == true {
+            nextPageEnable = true
+        } else if indeks == 8 && enWeek[8] == true {
+            nextPageEnable = true
+        } else if indeks == 9 && enWeek[9] == true {
+            nextPageEnable = true
+        } else if indeks == 10 && enWeek[10] == true {
+            nextPageEnable = true
+        } else if indeks == 11 && enWeek[11] == true {
+            nextPageEnable = true
+        } else if indeks == 12 && enWeek[12] == true {
+            nextPageEnable = true
+        } else if indeks == 13 && enWeek[13] == true {
+            nextPageEnable = true
+        } else if indeks == 14 && enWeek[14] == true {
+            nextPageEnable = true
+        } else if indeks == 15 && enWeek[15] == true {
+            nextPageEnable = true
+        } else if indeks == 16 && enWeek[16] == true {
+            nextPageEnable = true
+        } else if indeks == 17 && enWeek[17] == true {
+            nextPageEnable = true
+        } else if indeks == 18 && enWeek[18] == true {
+            nextPageEnable = true
+        } else if indeks == 19 && enWeek[19] == true {
+            nextPageEnable = true
+        } else if indeks == 20 && enWeek[20] == true {
+            nextPageEnable = true
+        } else if indeks == 21 && enWeek[21] == true {
+            nextPageEnable = true
+        } else if indeks == 22 && enWeek[22] == true {
+            nextPageEnable = true
+        } else if indeks == 23 && enWeek[23] == true {
+            nextPageEnable = true
+        } else {
+            nextPageEnable = false
         }
 
-        // Move to next VC
-        
-        let rencana = UIStoryboard(name: "WeeklyPlan2Storyboard", bundle: nil)
-        let vc = rencana.instantiateViewController(identifier: "WeeklyPlan2View") as! WeeklyPlan2ViewController
-        
-        vc.selectedWeek = indexPath.item
-        self.navigationController?.pushViewController(vc, animated: true)
+
+        if nextPageEnable == true {
+            if indeks > 0 {
+            let myIndexPath = IndexPath(row: indeks - 1, section: 0)
+                if let cell = collectionView.cellForItem(at: myIndexPath ) {
+                    cell.contentView.backgroundColor = UIColor(red: 145/255, green: 190/255, blue: 75/255, alpha: 100/255) // 145, 190, 75, 100
+                }
+            }
+            if let cell = collectionView.cellForItem(at: indexPath ) {
+                cell.contentView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 100/255) // 255, 255, 255, 100
+            }
+            let rencana = UIStoryboard(name: "WeeklyPlan2Storyboard", bundle: nil)
+            let vc = rencana.instantiateViewController(identifier: "WeeklyPlan2View") as! WeeklyPlan2ViewController
+            vc.selectedWeek = indeks
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
-
-//BUAT ALERT DI BACK BUTTON??
-
-//    @IBAction func backButton (_ sender: Any) {
-//        let alert = UIAlertController (title: "Reset", message: "Apakah kamu yakin mau mengatur ulang kegiatan ini?", preferredStyle: .alert)
-//        let tidak = UIAlertAction(title: "Tidak", style: .cancel, handler: nil)
-////        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-//        alert.addAction(tidak)
-//        alert.addAction(UIAlertAction(title: "Ya", style: .default, handler: { (alertAction) in
-//            let rencana = UIStoryboard(name: "WeeklyPlan1Storyboard", bundle: nil)
-//            let vc = rencana.instantiateViewController(identifier: "WeeklyPlan1View") as! WeeklyPlan1ViewController
-//
-//
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }))
-//
-//
-//
-//        //munculkan alert
-//        present(alert, animated: true, completion: nil)
-//
 }
+
+//        if indeks > 0 {
+//            let myIndexPath = IndexPath(row: indeks - 1, section: 0)
+//            if let cell = collectionView.cellForItem(at: myIndexPath ) {
+//                cell.contentView.backgroundColor = UIColor(red: 145/255, green: 190/255, blue: 75/255, alpha: 100/255) // 145, 190, 75, 100
+//            }
+//        }
+        
