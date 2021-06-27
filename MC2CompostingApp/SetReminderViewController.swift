@@ -65,35 +65,37 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         
         pilihanHariPicker.delegate = self
         
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.badge, .alert, .sound]){
-            (granted, Error) in
-        }
-        
-        let content = UNMutableNotificationContent()
-        content.title = "Pengingat"
-        content.body = "Hai! Cek kegiatan dalam perencaan mu hari ini yuk!"
-        
+//        let center = UNUserNotificationCenter.current()
+//        center.requestAuthorization(options: [.badge, .alert, .sound]){
+//            (granted, Error) in
+//        }
+//
+//        let content = UNMutableNotificationContent()
+//        content.title = "Pengingat"
+//        content.body = "Hai! Cek kegiatan dalam perencaan mu hari ini yuk!"
+//
         //triger notifikasi
 //        let date = Date().addingTimeInterval(5) // setelah  5 detik
 //        let dataComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
         
-        var dateComponents = DateComponents()
+//        var dateComponents = DateComponents()
+//
+//        dateComponents.calendar = Calendar.current
+////        pengulangan notifikasi di waktu tertentu
+//        dateComponents.weekday = 3
+//        dateComponents.hour = 8
+//        dateComponents.minute = 20
+//
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+//
+//        let uuidString = UUID().uuidString
+//        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+//
+//        center.add(request) {(error) in
+//            // Check the error parameter and handle any error
+//        }
         
-        dateComponents.calendar = Calendar.current
-//        pengulangan notifikasi di waktu tertentu
-        dateComponents.weekday = 3
-        dateComponents.hour = 8
-        dateComponents.minute = 20
-    
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        
-        let uuidString = UUID().uuidString
-        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
-        
-        center.add(request) {(error) in
-            // Check the error parameter and handle any error
-        }
+      
         
         
         //setup picker
@@ -120,10 +122,8 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
         let tanggalSekarang = cal.component(.day, from: date)
         
         let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.badge, .alert, .sound]){
-            (granted, Error) in
-        }
-        for i in tanggalSekarang...tanggalSekarang+monthPeriod{
+       
+        for i in tanggalSekarang+1...tanggalSekarang+(monthPeriod*30){
             if (i-tanggalSekarang)%gapDays == 0{
                 var dateComponents = DateComponents()
                 
@@ -133,8 +133,11 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
                 dateComponents.hour =  cal.component(.hour, from: pilihanJamPicker.date)
                 dateComponents.minute =  cal.component(.minute, from: pilihanJamPicker.date)
 //                dateComponents.minute = 20
+                
+//                dump(dateComponents)
             
-                let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+                let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+                let triger2 = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
                 
                 let uuidString = UUID().uuidString
                 let content = UNMutableNotificationContent()
@@ -142,13 +145,44 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
                 content.body = "Hai! Cek kegiatan dalam perencaan mu hari ini yuk!"
                 let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
                 
+                let re2 = UNNotificationRequest(identifier: "coba", content: content, trigger: triger2
+                )
+                
                 center.add(request) {(error) in
+                    // Check the error parameter and handle any error
+                }
+                center.add(re2) { (error) in
+                    if let error = error{
+                        print(error)
+                    }
+                }
+            }
+        }
+    }
+    func createDailyNotif2(gapDays:Int,monthPeriod:Int){
+        //detect sekarang hari apa
+        //3 hari dari hari minggu sampe 3 bulan kedapan apa aja
+//        let date = Date()
+//        let cal = Calendar.current
+//        let tanggalSekarang = cal.component(.day, from: date)
+        
+       
+        
+        for i in 5...waktuTigaHari*monthPeriod*10{
+            if (i - waktuTigaHari) % waktuTigaHari == 0 || i==10{
+                let triger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(i), repeats: false)
+                let uuidString = UUID().uuidString
+                let content = UNMutableNotificationContent()
+                content.title = "Pengingat"
+                content.body = "Hai! Cek kegiatan dalam perencaan mu hari ini yuk!"
+                let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: triger)
+                
+                UNUserNotificationCenter.current().add(request) {(error) in
                     // Check the error parameter and handle any error
                 }
             }
         }
     }
-
     @IBAction func simpan(_ sender: Any) {
 
         //set alert
@@ -208,5 +242,12 @@ class SetReminderViewController: UIViewController, UITextFieldDelegate, UIPicker
 extension Int {
     static func parse(from string:String)->Int?{
         return Int(string.components(separatedBy: CharacterSet.decimalDigits.inverted).joined())
+    }
+}
+
+
+extension SetReminderViewController : UNUserNotificationCenterDelegate{
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.sound])
     }
 }

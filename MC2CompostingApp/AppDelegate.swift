@@ -9,11 +9,24 @@ import UIKit
 import CoreData
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.sound])
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let center = UNUserNotificationCenter.current()
+        let option : UNAuthorizationOptions = [.alert,.sound,.badge]
+        center.requestAuthorization(options: option) { (granted, error) in
+            if let error = error {
+                print(error)
+            }else{
+                print(granted)
+            }
+        }
         // Override point for customization after application launch.
         return true
     }
