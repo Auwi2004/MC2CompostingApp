@@ -32,6 +32,7 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
     var pesan1: Bool = false
     var pesan2: Bool = false
     var pesan3: Bool = false
+    var final: Bool = false
     var gotNoticed: Bool = false // harus diambil dari set reminder jika sudah di notifikasi maka jadi true
     // diambil dengan --> gotNoticed = usedDefaults.Value(forKey: "NOTICE")
     // notice ketika tanggal notifikasi terlewati...
@@ -72,6 +73,7 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
         pesan1 = userDefaults.value(forKey: "PESAN1") as! Bool
         pesan2 = userDefaults.value(forKey: "PESAN2") as! Bool
         pesan3 = userDefaults.value(forKey: "PESAN3") as! Bool
+
         if pesan1 == true {
             pesanUILabel.text = "Kamu sudah menyelesaikan kegiatan hari ini. Sampai bertemu pada kegiatan selanjutnya ya!"
             if gotNoticed == true {
@@ -108,7 +110,7 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.size.width/3.45), height: (view.frame.size.width/3.45))
+        return CGSize(width: (view.frame.size.width/3.2), height: (view.frame.size.width/3.2))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -214,19 +216,37 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
         } else {
             nextPageEnable = false
         }
-
-        if pilihbulan == 2 && enWeek[7] == false {
+        final = userDefaults.value(forKey: "FINAL") as! Bool
+        if pilihbulan == 2 && enWeek[7] == false && final == true {
             print("Test test test test")
+            // Ganti warna
             let cell = collectionView.cellForItem(at: indexPath )
             cell!.contentView.backgroundColor = UIColor(red: 145/255, green: 190/255, blue: 75/255, alpha: 100/255)
+            
+            // Pindah ke halaman terakhir
+            let rencana = UIStoryboard(name: "FinalPage", bundle: nil)
+            let vc = rencana.instantiateViewController(identifier: "FinalView") as! FinalViewController
+            self.navigationController?.pushViewController(vc, animated: true)
         }
-        if pilihbulan == 3 && enWeek[11] == false {
+        if pilihbulan == 3 && enWeek[11] == false && final == true {
+            // Ganti warna
             let cell = collectionView.cellForItem(at: indexPath )
             cell!.contentView.backgroundColor = UIColor(red: 145/255, green: 190/255, blue: 75/255, alpha: 100/255)
+            
+            // Pindah ke halaman terakhir
+            let rencana = UIStoryboard(name: "FinalPage", bundle: nil)
+            let vc = rencana.instantiateViewController(identifier: "FinalView") as! FinalViewController
+            self.navigationController?.pushViewController(vc, animated: true)
         }
-        if pilihbulan == 6 && enWeek[23] == false {
+        if pilihbulan == 6 && enWeek[23] == false && final == true {
+            // Ganti warna
             let cell = collectionView.cellForItem(at: indexPath )
             cell!.contentView.backgroundColor = UIColor(red: 145/255, green: 190/255, blue: 75/255, alpha: 100/255)
+            
+            // Pindah ke halaman terakhir
+            let rencana = UIStoryboard(name: "FinalPage", bundle: nil)
+            let vc = rencana.instantiateViewController(identifier: "FinalView") as! FinalViewController
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         
         // Bisa pindah halaman radio button

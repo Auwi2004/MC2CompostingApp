@@ -20,6 +20,7 @@ class WeeklyPlan2ViewController: UIViewController {
     var pesan1: Bool = false
     var pesan2: Bool = false
     var pesan3: Bool = false
+    var final: Bool = false
 
     var selectedWeek: Int = 0
     var selectedMonth: Int = 0
@@ -128,6 +129,7 @@ class WeeklyPlan2ViewController: UIViewController {
                     userDefaults.setValue(true, forKey: "ENWEEK8")
                 } else if selectedWeek == 7 {
                     userDefaults.setValue(false, forKey: "ENWEEK8")
+                    userDefaults.setValue(true, forKey: "FINAL")
                 }
             } // selectedMonth = 2
  
@@ -168,6 +170,7 @@ class WeeklyPlan2ViewController: UIViewController {
                     userDefaults.setValue(true, forKey: "ENWEEK12")
                 } else if selectedWeek == 11 {
                     userDefaults.setValue(false, forKey: "ENWEEK12")
+                    userDefaults.setValue(true, forKey: "FINAL")
                 }
             } // selectedMonth = 3
             
@@ -241,6 +244,7 @@ class WeeklyPlan2ViewController: UIViewController {
                     userDefaults.setValue(true, forKey: "ENWEEK23")
                 } else if selectedWeek == 22 {
                     userDefaults.setValue(false, forKey: "ENWEEK24")
+                    userDefaults.setValue(true, forKey: "FINAL")
 //                    userDefaults.setValue(false, forKey: "ENWEEK23")
 //                    userDefaults.setValue(true, forKey: "ENWEEK24")
                 }

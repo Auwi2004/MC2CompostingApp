@@ -125,6 +125,7 @@ class PlannerViewController: UIViewController {
         userDefaults.setValue(false, forKey: "PESAN1")
         userDefaults.setValue(false, forKey: "PESAN2")
         userDefaults.setValue(false, forKey: "PESAN3")
+        userDefaults.setValue(false, forKey: "FINAL")
         
     }
     

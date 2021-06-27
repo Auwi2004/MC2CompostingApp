@@ -16,6 +16,7 @@
 		36D5011C2678AE0F00FFD110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D5011A2678AE0F00FFD110 /* LaunchScreen.storyboard */; };
 		36D501272678AE0F00FFD110 /* MC2CompostingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D501262678AE0F00FFD110 /* MC2CompostingAppTests.swift */; };
 		36D501322678AE0F00FFD110 /* MC2CompostingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D501312678AE0F00FFD110 /* MC2CompostingAppUITests.swift */; };
+		833758522688D029000AFA86 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833758512688D029000AFA86 /* FinalViewController.swift */; };
 		8359E4FC26857A4600797793 /* WeeklyPlan1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8359E4F726857A4600797793 /* WeeklyPlan1ViewController.swift */; };
 		8359E4FD26857A4600797793 /* WeeklyPlan1CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8359E4F826857A4600797793 /* WeeklyPlan1CollectionViewCell.swift */; };
 		8359E4FE26857A4600797793 /* WeeklyPlan2Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8359E4F926857A4600797793 /* WeeklyPlan2Storyboard.storyboard */; };
@@ -64,6 +65,7 @@
 		36D5012D2678AE0F00FFD110 /* MC2CompostingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MC2CompostingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D501312678AE0F00FFD110 /* MC2CompostingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2CompostingAppUITests.swift; sourceTree = "<group>"; };
 		36D501332678AE0F00FFD110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		833758512688D029000AFA86 /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		8359E4F726857A4600797793 /* WeeklyPlan1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyPlan1ViewController.swift; sourceTree = "<group>"; };
 		8359E4F826857A4600797793 /* WeeklyPlan1CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyPlan1CollectionViewCell.swift; sourceTree = "<group>"; };
 		8359E4F926857A4600797793 /* WeeklyPlan2Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WeeklyPlan2Storyboard.storyboard; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				95BA2A212678B85600EB93FF /* SetReminder.storyboard */,
 				95BA2A232678B86C00EB93FF /* SetReminderViewController.swift */,
 				95AA4DCE268575AE009C886A /* FinalPage.storyboard */,
+				833758512688D029000AFA86 /* FinalViewController.swift */,
 				36D501182678AE0F00FFD110 /* Assets.xcassets */,
 				36D5011D2678AE0F00FFD110 /* Info.plist */,
 				36D501152678AE0E00FFD110 /* MC2CompostingApp.xcdatamodeld */,
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D501112678AE0E00FFD110 /* ViewController.swift in Sources */,
+				833758522688D029000AFA86 /* FinalViewController.swift in Sources */,
 				36D5010D2678AE0E00FFD110 /* AppDelegate.swift in Sources */,
 				36D5010F2678AE0E00FFD110 /* SceneDelegate.swift in Sources */,
 				95BA2A242678B86C00EB93FF /* SetReminderViewController.swift in Sources */,
