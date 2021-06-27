@@ -13,7 +13,9 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
     let minggu2: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
     let minggu3: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
     
+    // @IBOutlet weak var pesanUILabel: UILabel!
     
+    @IBOutlet weak var pesanUILabel: UILabel!
     let layout = UICollectionViewFlowLayout()
     
     var minggu = [String]()
@@ -24,6 +26,15 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
     var indeks: Int = 0
     var indCollor: Int = 0
     var tempBool: Bool = false
+    var check1: Bool = false
+    var check2: Bool = false
+    var check3: Bool = false
+    var pesan1: Bool = false
+    var pesan2: Bool = false
+    var pesan3: Bool = false
+    var gotNoticed: Bool = false // harus diambil dari set reminder jika sudah di notifikasi maka jadi true
+    // diambil dengan --> gotNoticed = usedDefaults.Value(forKey: "NOTICE")
+    // notice ketika tanggal notifikasi terlewati...
     var userDefaults = UserDefaults.standard // digunakan untuk menimpan BULAN, WEEK dst
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -36,11 +47,52 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
         
         pilihbulan = userDefaults.value(forKey: "MONTH") as! Int // ambil data BULAN yang dipilih dari halaman lain
         selectedMonth() // jumlah minggu sesuai pilihan bulan
+        
+        pesanUILabel.text = "Pesan Awal"
 
     }
     
+    
+    
+//    @IBAction func notifBtn(_ sender: Any) {
+//        gotNoticed = true
+//        if pesan1 == true && gotNoticed == true{
+//            pesanUILabel.text = "Yuk masukan material dalam komposter kamu."
+//            gotNoticed = false
+//        }
+//        if pesan2 == true && gotNoticed == true {
+//            pesanUILabel.text = "Kamu punya satu kegiatan terakhir yang harus dilakukan nih. Cek, ya!"
+//            gotNoticed = false
+//        }
+//    }
+    
     override func viewWillAppear(_ animated: Bool) {
-        collectionView.reloadData()
+//        collectionView.reloadData()
+//        print("test test test")
+        pesan1 = userDefaults.value(forKey: "PESAN1") as! Bool
+        pesan2 = userDefaults.value(forKey: "PESAN2") as! Bool
+        pesan3 = userDefaults.value(forKey: "PESAN3") as! Bool
+        if pesan1 == true {
+            pesanUILabel.text = "Kamu sudah menyelesaikan kegiatan hari ini. Sampai bertemu pada kegiatan selanjutnya ya!"
+            if gotNoticed == true {
+                pesanUILabel.text = "Yuk masukan material dalam komposter kamu."
+            }
+        } else if pesan2 == true {
+            pesanUILabel.text = "Kamu sudah menyelesaikan kegiatan hari ini. Sampai bertemu pada kegiatan selanjutnya ya!"
+            if gotNoticed == true {
+                pesanUILabel.text = "Kamu punya satu kegiatan terakhir yang harus dilakukan nih. Cek, ya!"
+            }
+        } else if pesan3 == true {
+            pesanUILabel.text = "Keren! kamu sudah menyelesaikan semua kegiatan. Sampai jumpa minggu depan ya!"
+        } else {
+            pesanUILabel.text = "Ayo kumpulkan sampah yang kamu hasilkan!"
+        }
+        if pesan1 == true && pesan2 == true && pesan3 == true {
+            userDefaults.setValue(false, forKey: "PESAN1")
+            userDefaults.setValue(false, forKey: "PESAN2")
+            userDefaults.setValue(false, forKey: "PESAN3")
+        }
+        
     }
     
     
@@ -163,17 +215,34 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
             nextPageEnable = false
         }
 
-
+        if pilihbulan == 2 && enWeek[7] == false {
+            print("Test test test test")
+            let cell = collectionView.cellForItem(at: indexPath )
+            cell!.contentView.backgroundColor = UIColor(red: 145/255, green: 190/255, blue: 75/255, alpha: 100/255)
+        }
+        if pilihbulan == 3 && enWeek[11] == false {
+            let cell = collectionView.cellForItem(at: indexPath )
+            cell!.contentView.backgroundColor = UIColor(red: 145/255, green: 190/255, blue: 75/255, alpha: 100/255)
+        }
+        if pilihbulan == 6 && enWeek[23] == false {
+            let cell = collectionView.cellForItem(at: indexPath )
+            cell!.contentView.backgroundColor = UIColor(red: 145/255, green: 190/255, blue: 75/255, alpha: 100/255)
+        }
+        
+        // Bisa pindah halaman radio button
         if nextPageEnable == true {
+            if let cell = collectionView.cellForItem(at: indexPath ) {
+                cell.contentView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 100/255)
+            }
             if indeks > 0 {
-            let myIndexPath = IndexPath(row: indeks - 1, section: 0)
+                let myIndexPath = IndexPath(row: indeks - 1, section: 0)
                 if let cell = collectionView.cellForItem(at: myIndexPath ) {
-                    cell.contentView.backgroundColor = UIColor(red: 145/255, green: 190/255, blue: 75/255, alpha: 100/255) // 145, 190, 75, 100
+                    cell.contentView.backgroundColor = UIColor(red: 145/255, green: 190/255, blue: 75/255, alpha: 100/255)
                 }
             }
-            if let cell = collectionView.cellForItem(at: indexPath ) {
-                cell.contentView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 100/255) // 255, 255, 255, 100
-            }
+
+            
+            // Push VC
             let rencana = UIStoryboard(name: "WeeklyPlan2Storyboard", bundle: nil)
             let vc = rencana.instantiateViewController(identifier: "WeeklyPlan2View") as! WeeklyPlan2ViewController
             vc.selectedWeek = indeks
@@ -183,10 +252,3 @@ class WeeklyPlan1ViewController: UIViewController, UICollectionViewDataSource, U
     
 }
 
-//        if indeks > 0 {
-//            let myIndexPath = IndexPath(row: indeks - 1, section: 0)
-//            if let cell = collectionView.cellForItem(at: myIndexPath ) {
-//                cell.contentView.backgroundColor = UIColor(red: 145/255, green: 190/255, blue: 75/255, alpha: 100/255) // 145, 190, 75, 100
-//            }
-//        }
-        

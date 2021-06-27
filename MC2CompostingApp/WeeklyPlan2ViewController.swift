@@ -17,7 +17,12 @@ class WeeklyPlan2ViewController: UIViewController {
     var check1: Bool = false
     var check2: Bool = false
     var check3: Bool = false
+    var pesan1: Bool = false
+    var pesan2: Bool = false
+    var pesan3: Bool = false
+
     var selectedWeek: Int = 0
+    var selectedMonth: Int = 0
     var userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
@@ -25,6 +30,7 @@ class WeeklyPlan2ViewController: UIViewController {
         title = "Kegiatan"
         
         check = userDefaults.value(forKey: "CHECK") as! Bool
+        selectedMonth = userDefaults.value(forKey: "MONTH") as! Int
         if check == true {
             check1 = userDefaults.value(forKey: "CHECK1") as! Bool
             check2 = userDefaults.value(forKey: "CHECK2") as! Bool
@@ -50,6 +56,7 @@ class WeeklyPlan2ViewController: UIViewController {
                 sender.isSelected = true
             }
             check1 = true
+            pesan1 = true
         }
     }
     
@@ -63,6 +70,7 @@ class WeeklyPlan2ViewController: UIViewController {
                 }
             }
             check2 = true
+            pesan2 = true
         }
     }
     
@@ -76,6 +84,7 @@ class WeeklyPlan2ViewController: UIViewController {
                     sender.isSelected = true
                 }
                 check3 = true
+                pesan3 = true
             }
         }
     }
@@ -86,100 +95,169 @@ class WeeklyPlan2ViewController: UIViewController {
         userDefaults.setValue(check2, forKey: "CHECK2") // simpan data sub week
         userDefaults.setValue(check3, forKey: "CHECK3") // simpan data sub week
         userDefaults.setValue(selectedWeek, forKey: "WEEK") // simpan data week
+        userDefaults.setValue(pesan1, forKey: "PESAN1")
+        userDefaults.setValue(pesan2, forKey: "PESAN2")
+        userDefaults.setValue(pesan3, forKey: "PESAN3")
         
         if check1 == true && check2 == true && check3 == true {
             userDefaults.setValue(false, forKey: "CHECK1") // simpan data sub week
             userDefaults.setValue(false, forKey: "CHECK2") // simpan data sub week
             userDefaults.setValue(false, forKey: "CHECK3") // simpan data sub week
-            userDefaults.setValue(true, forKey: "GREEN") // simpan data sub week
-            userDefaults.setValue(selectedWeek, forKey: "WEEK") // berarti yang bisa dipilih warna terang dan yang sebelumnya yang tidak bisa dipilih warna hijau.
             
-            if selectedWeek == 0 {
-                userDefaults.setValue(false, forKey: "ENWEEK1")
-                userDefaults.setValue(true, forKey: "ENWEEK2")
-            } else if selectedWeek == 1 {
-                userDefaults.setValue(false, forKey: "ENWEEK2")
-                userDefaults.setValue(true, forKey: "ENWEEK3")
-            } else if selectedWeek == 2 {
-                userDefaults.setValue(false, forKey: "ENWEEK3")
-                userDefaults.setValue(true, forKey: "ENWEEK4")
-            } else if selectedWeek == 3 {
-                userDefaults.setValue(false, forKey: "ENWEEK4")
-                userDefaults.setValue(true, forKey: "ENWEEK5")
-            } else if selectedWeek == 4 {
-                userDefaults.setValue(false, forKey: "ENWEEK5")
-                userDefaults.setValue(true, forKey: "ENWEEK6")
-            } else if selectedWeek == 5 {
-                userDefaults.setValue(false, forKey: "ENWEEK6")
-                userDefaults.setValue(true, forKey: "ENWEEK7")
-            } else if selectedWeek == 6 {
-                userDefaults.setValue(false, forKey: "ENWEEK7")
-                userDefaults.setValue(true, forKey: "ENWEEK8")
-            } else if selectedWeek == 7 {
-                userDefaults.setValue(false, forKey: "ENWEEK8")
-                userDefaults.setValue(true, forKey: "ENWEEK9")
-            } else if selectedWeek == 8 {
-                userDefaults.setValue(false, forKey: "ENWEEK9")
-                userDefaults.setValue(true, forKey: "ENWEEK10")
-            } else if selectedWeek == 9 {
-                userDefaults.setValue(false, forKey: "ENWEEK10")
-                userDefaults.setValue(true, forKey: "ENWEEK11")
-            } else if selectedWeek == 10 {
-                userDefaults.setValue(false, forKey: "ENWEEK11")
-                userDefaults.setValue(true, forKey: "ENWEEK12")
-            } else if selectedWeek == 11 {
-                userDefaults.setValue(false, forKey: "ENWEEK12")
-                userDefaults.setValue(true, forKey: "ENWEEK13")
-            } else if selectedWeek == 12 {
-                userDefaults.setValue(false, forKey: "ENWEEK13")
-                userDefaults.setValue(true, forKey: "ENWEEK14")
-            } else if selectedWeek == 13 {
-                userDefaults.setValue(false, forKey: "ENWEEK14")
-                userDefaults.setValue(true, forKey: "ENWEEK15")
-            } else if selectedWeek == 14 {
-                userDefaults.setValue(false, forKey: "ENWEEK15")
-                userDefaults.setValue(true, forKey: "ENWEEK16")
-            } else if selectedWeek == 15 {
-                userDefaults.setValue(false, forKey: "ENWEEK16")
-                userDefaults.setValue(true, forKey: "ENWEEK17")
-            } else if selectedWeek == 16 {
-                userDefaults.setValue(false, forKey: "ENWEEK17")
-                userDefaults.setValue(true, forKey: "ENWEEK18")
-            } else if selectedWeek == 17 {
-                userDefaults.setValue(false, forKey: "ENWEEK18")
-                userDefaults.setValue(true, forKey: "ENWEEK19")
-            } else if selectedWeek == 18 {
-                userDefaults.setValue(false, forKey: "ENWEEK19")
-                userDefaults.setValue(true, forKey: "ENWEEK20")
-            } else if selectedWeek == 19 {
-                userDefaults.setValue(false, forKey: "ENWEEK20")
-                userDefaults.setValue(true, forKey: "ENWEEK21")
-            } else if selectedWeek == 20 {
-                userDefaults.setValue(false, forKey: "ENWEEK21")
-                userDefaults.setValue(true, forKey: "ENWEEK22")
-            } else if selectedWeek == 21 {
-                userDefaults.setValue(false, forKey: "ENWEEK22")
-                userDefaults.setValue(true, forKey: "ENWEEK23")
-            } else if selectedWeek == 22 {
-                userDefaults.setValue(false, forKey: "ENWEEK23")
-                userDefaults.setValue(true, forKey: "ENWEEK24")
-            }
-       // mengganti warna sebelum balik ke halaman induk
-//            self.dismiss(animated: true, completion: nil)
+            if selectedMonth == 2 {
+                if selectedWeek == 0 {
+                    userDefaults.setValue(false, forKey: "ENWEEK1")
+                    userDefaults.setValue(true, forKey: "ENWEEK2")
+                } else if selectedWeek == 1 {
+                    userDefaults.setValue(false, forKey: "ENWEEK2")
+                    userDefaults.setValue(true, forKey: "ENWEEK3")
+                } else if selectedWeek == 2 {
+                    userDefaults.setValue(false, forKey: "ENWEEK3")
+                    userDefaults.setValue(true, forKey: "ENWEEK4")
+                } else if selectedWeek == 3 {
+                    userDefaults.setValue(false, forKey: "ENWEEK4")
+                    userDefaults.setValue(true, forKey: "ENWEEK5")
+                } else if selectedWeek == 4 {
+                    userDefaults.setValue(false, forKey: "ENWEEK5")
+                    userDefaults.setValue(true, forKey: "ENWEEK6")
+                } else if selectedWeek == 5 {
+                    userDefaults.setValue(false, forKey: "ENWEEK6")
+                    userDefaults.setValue(true, forKey: "ENWEEK7")
+                } else if selectedWeek == 6 {
+                    userDefaults.setValue(false, forKey: "ENWEEK7")
+                    userDefaults.setValue(true, forKey: "ENWEEK8")
+                } else if selectedWeek == 7 {
+                    userDefaults.setValue(false, forKey: "ENWEEK8")
+                }
+            } // selectedMonth = 2
+ 
+            
+            if selectedMonth == 3 {
+                if selectedWeek == 0 {
+                    userDefaults.setValue(false, forKey: "ENWEEK1")
+                    userDefaults.setValue(true, forKey: "ENWEEK2")
+                } else if selectedWeek == 1 {
+                    userDefaults.setValue(false, forKey: "ENWEEK2")
+                    userDefaults.setValue(true, forKey: "ENWEEK3")
+                } else if selectedWeek == 2 {
+                    userDefaults.setValue(false, forKey: "ENWEEK3")
+                    userDefaults.setValue(true, forKey: "ENWEEK4")
+                } else if selectedWeek == 3 {
+                    userDefaults.setValue(false, forKey: "ENWEEK4")
+                    userDefaults.setValue(true, forKey: "ENWEEK5")
+                } else if selectedWeek == 4 {
+                    userDefaults.setValue(false, forKey: "ENWEEK5")
+                    userDefaults.setValue(true, forKey: "ENWEEK6")
+                } else if selectedWeek == 5 {
+                    userDefaults.setValue(false, forKey: "ENWEEK6")
+                    userDefaults.setValue(true, forKey: "ENWEEK7")
+                } else if selectedWeek == 6 {
+                    userDefaults.setValue(false, forKey: "ENWEEK7")
+                    userDefaults.setValue(true, forKey: "ENWEEK8")
+                } else if selectedWeek == 7 {
+                    userDefaults.setValue(false, forKey: "ENWEEK8")
+                    userDefaults.setValue(true, forKey: "ENWEEK9")
+                } else if selectedWeek == 8 {
+                    userDefaults.setValue(false, forKey: "ENWEEK9")
+                    userDefaults.setValue(true, forKey: "ENWEEK10")
+                } else if selectedWeek == 9 {
+                    userDefaults.setValue(false, forKey: "ENWEEK10")
+                    userDefaults.setValue(true, forKey: "ENWEEK11")
+                } else if selectedWeek == 10 {
+                    userDefaults.setValue(false, forKey: "ENWEEK11")
+                    userDefaults.setValue(true, forKey: "ENWEEK12")
+                } else if selectedWeek == 11 {
+                    userDefaults.setValue(false, forKey: "ENWEEK12")
+                }
+            } // selectedMonth = 3
+            
+            
+            if selectedMonth == 6 {
+                if selectedWeek == 0 {
+                    userDefaults.setValue(false, forKey: "ENWEEK1")
+                    userDefaults.setValue(true, forKey: "ENWEEK2")
+                } else if selectedWeek == 1 {
+                    userDefaults.setValue(false, forKey: "ENWEEK2")
+                    userDefaults.setValue(true, forKey: "ENWEEK3")
+                } else if selectedWeek == 2 {
+                    userDefaults.setValue(false, forKey: "ENWEEK3")
+                    userDefaults.setValue(true, forKey: "ENWEEK4")
+                } else if selectedWeek == 3 {
+                    userDefaults.setValue(false, forKey: "ENWEEK4")
+                    userDefaults.setValue(true, forKey: "ENWEEK5")
+                } else if selectedWeek == 4 {
+                    userDefaults.setValue(false, forKey: "ENWEEK5")
+                    userDefaults.setValue(true, forKey: "ENWEEK6")
+                } else if selectedWeek == 5 {
+                    userDefaults.setValue(false, forKey: "ENWEEK6")
+                    userDefaults.setValue(true, forKey: "ENWEEK7")
+                } else if selectedWeek == 6 {
+                    userDefaults.setValue(false, forKey: "ENWEEK7")
+                    userDefaults.setValue(true, forKey: "ENWEEK8")
+                } else if selectedWeek == 7 {
+                    userDefaults.setValue(false, forKey: "ENWEEK8")
+                    userDefaults.setValue(true, forKey: "ENWEEK9")
+                } else if selectedWeek == 8 {
+                    userDefaults.setValue(false, forKey: "ENWEEK9")
+                    userDefaults.setValue(true, forKey: "ENWEEK10")
+                } else if selectedWeek == 9 {
+                    userDefaults.setValue(false, forKey: "ENWEEK10")
+                    userDefaults.setValue(true, forKey: "ENWEEK11")
+                } else if selectedWeek == 10 {
+                    userDefaults.setValue(false, forKey: "ENWEEK11")
+                    userDefaults.setValue(true, forKey: "ENWEEK12")
+                } else if selectedWeek == 11 {
+                    userDefaults.setValue(false, forKey: "ENWEEK12")
+                    userDefaults.setValue(true, forKey: "ENWEEK13")
+                } else if selectedWeek == 12 {
+                    userDefaults.setValue(false, forKey: "ENWEEK13")
+                    userDefaults.setValue(true, forKey: "ENWEEK14")
+                } else if selectedWeek == 13 {
+                    userDefaults.setValue(false, forKey: "ENWEEK14")
+                    userDefaults.setValue(true, forKey: "ENWEEK15")
+                } else if selectedWeek == 14 {
+                    userDefaults.setValue(false, forKey: "ENWEEK15")
+                    userDefaults.setValue(true, forKey: "ENWEEK16")
+                } else if selectedWeek == 15 {
+                    userDefaults.setValue(false, forKey: "ENWEEK16")
+                    userDefaults.setValue(true, forKey: "ENWEEK17")
+                } else if selectedWeek == 16 {
+                    userDefaults.setValue(false, forKey: "ENWEEK17")
+                    userDefaults.setValue(true, forKey: "ENWEEK18")
+                } else if selectedWeek == 17 {
+                    userDefaults.setValue(false, forKey: "ENWEEK18")
+                    userDefaults.setValue(true, forKey: "ENWEEK19")
+                } else if selectedWeek == 18 {
+                    userDefaults.setValue(false, forKey: "ENWEEK19")
+                    userDefaults.setValue(true, forKey: "ENWEEK20")
+                } else if selectedWeek == 19 {
+                    userDefaults.setValue(false, forKey: "ENWEEK20")
+                    userDefaults.setValue(true, forKey: "ENWEEK21")
+                } else if selectedWeek == 20 {
+                    userDefaults.setValue(false, forKey: "ENWEEK21")
+                    userDefaults.setValue(true, forKey: "ENWEEK22")
+                } else if selectedWeek == 21 {
+                    userDefaults.setValue(false, forKey: "ENWEEK22")
+                    userDefaults.setValue(true, forKey: "ENWEEK23")
+                } else if selectedWeek == 22 {
+                    userDefaults.setValue(false, forKey: "ENWEEK24")
+//                    userDefaults.setValue(false, forKey: "ENWEEK23")
+//                    userDefaults.setValue(true, forKey: "ENWEEK24")
+                }
+            } // selectedMonth = 6
+            
+            
+            
+            
+            
             
         }
-        self.navigationController?.popViewController(animated: true)
-//        dismiss(animated: true, completion: nil)
+        
+//        self.navigationController?.popViewController(animated: true)
         
     }
-//    override func willMove(toParent parent: UIViewController?) {
-//        super.willMove(toParent: parent)
-//
-//        if parent == nil {
-//            print("Tulis sesuatu")
-//        }
-//    }
 
     
 }
+
 
